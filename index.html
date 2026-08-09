@@ -312,8 +312,13 @@
     }
 
     function openSubject(subject) {
-      alert(subject + " section coming soon!");
-    }
+  if (subject === "Physics") {
+    window.location.href = "Physics.html";
+  } else {
+    alert(subject + " section coming soon!");
+  }
+}
+    
 
     function openClass(classNumber) {
       alert("Class " + classNumber + " section coming soon!");

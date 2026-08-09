@@ -1,663 +1,1482 @@
 
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Class 12 Physics Notes - Student Hub</title><meta name="description"
-content="Class 12 Physics chapter-wise notes, formulas, important topics and MCQs.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
+<title>Student Hub - Class 12 Physics Detailed Notes</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#172033;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#141e30,#243b55);
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+}
+
+header h1{
+    font-size:32px;
+}
+
+header p{
+    margin-top:8px;
+}
+
+.container{
+    max-width:1050px;
+    margin:auto;
+    padding:20px;
+}
+
+.search{
+    width:100%;
+    padding:15px;
+    border:2px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.chapter{
+    background:white;
+    border-radius:14px;
+    margin-bottom:18px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.chapter-title{
+    padding:20px;
+    cursor:pointer;
+    font-size:21px;
+    font-weight:bold;
+}
+
+.chapter-title:hover{
+    background:#eef4ff;
+}
+
+.notes{
+    display:none;
+    padding:22px;
+    border-top:1px solid #eee;
+}
+
+.notes h2{
+    color:#2455a4;
+    margin:20px 0 8px;
+}
+
+.notes h3{
+    margin:16px 0 6px;
+}
+
+.notes ul,
+.notes ol{
+    margin-left:25px;
+}
+
+.formula{
+    background:#eef4ff;
+    border-left:5px solid #2455a4;
+    padding:13px;
+    margin:12px 0;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.derivation{
+    background:#f5f0ff;
+    border-left:5px solid #7b3fc6;
+    padding:14px;
+    margin:12px 0;
+    border-radius:7px;
+}
+
+.important{
+    background:#fff6dc;
+    border-left:5px solid #e5a400;
+    padding:13px;
+    margin:12px 0;
+    border-radius:7px;
+}
+
+.question{
+    background:#edfff3;
+    border-left:5px solid #249b5a;
+    padding:13px;
+    margin:10px 0;
+    border-radius:7px;
+}
+
+footer{
+    background:#172033;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:25px;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .container{
+        padding:12px;
     }
 
-    body {
-      background: #f5f7fb;
-      color: #172033;
-      line-height: 1.6;
+    .notes{
+        padding:16px;
     }
 
-    header {
-      background: linear-gradient(135deg, #2563eb, #4f46e5);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
+    .chapter-title{
+        font-size:18px;
     }
+}
+</style>
+</head>
 
-    header h1 {
-      font-size: 34px;
-      margin-bottom: 8px;
-    }
+<body>
 
-    header p {
-      font-size: 17px;
-    }
+<header>
+    <h1>⚡ Student Hub</h1>
+    <p>Class 12 Physics — Detailed Notes</p>
+    <p>Concepts • Formulas • Derivations • Important Questions</p>
+</header>
 
-    .container {
-      width: 92%;
-      max-width: 1000px;
-      margin: 25px auto;
-    }
+<div class="container">
 
-    .back {
-      display: inline-block;
-      background: white;
-      color: #2563eb;
-      text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 8px;
-      margin-bottom: 25px;
-      font-weight: bold;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    }
+<input
+    id="search"
+    class="search"
+    type="text"
+    placeholder="🔍 Search Physics chapter or topic..."
+    onkeyup="searchNotes()"
+>
 
-    .chapter-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 15px;
-      margin-bottom: 35px;
-    }
 
-    .chapter-card {
-      background: white;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-    }
+<!-- ================= CHAPTER 1 ================= -->
 
-    .chapter-card h3 {
-      color: #2563eb;
-      margin-bottom: 8px;
-    }
+<div class="chapter">
 
-    .chapter-card p {
-      color: #667085;
-      font-size: 14px;
-      margin-bottom: 12px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 7px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .chapter {
-      background: white;
-      padding: 25px;
-      margin-bottom: 25px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-      scroll-margin-top: 20px;
-    }
-
-    .chapter h2 {
-      color: #2563eb;
-      margin-bottom: 15px;
-    }
-
-    .chapter h3 {
-      margin-top: 18px;
-      margin-bottom: 8px;
-    }
-
-    .formula {
-      background: #eef4ff;
-      padding: 12px;
-      margin: 9px 0;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .important {
-      background: #fff7ed;
-      border-left: 5px solid #f97316;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 7px;
-    }
-
-    ul {
-      padding-left: 22px;
-    }
-
-    .top {
-      text-align: right;
-      margin-top: 15px;
-    }
-
-    .top a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 35px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 27px;
-      }
-
-      .chapter {
-        padding: 18px;
-      }
-    }
-  </style></head><body id="top"><header>
-  <h1>⚡ Class 12 Physics</h1>
-  <p>Chapter-wise Notes • Formulas • Important Topics</p>
-</header><div class="container"><a class="back" href="index.html">← Back to Student Hub</a>
-
-  <h2 style="margin-bottom:18px;">📚 Physics Chapters</h2>  <div class="chapter-list"><div class="chapter-card">
-  <h3>Chapter 1</h3>
-  <p>Electric Charges and Fields</p>
-  <a class="btn" href="#chapter1">Open Notes</a>
+<div class="chapter-title" onclick="toggle(this)">
+1️⃣ Electric Charges and Fields
 </div>
 
-<div class="chapter-card">
-  <h3>Chapter 2</h3>
-  <p>Electrostatic Potential and Capacitance</p>
-  <a class="btn" href="#chapter2">Open Notes</a>
-</div>
+<div class="notes">
 
-<div class="chapter-card">
-  <h3>Chapter 3</h3>
-  <p>Current Electricity</p>
-  <a class="btn" href="#chapter3">Open Notes</a>
-</div>
-
-<div class="chapter-card">
-  <h3>Chapter 4</h3>
-  <p>Moving Charges and Magnetism</p>
-  <a class="btn" href="#chapter4">Open Notes</a>
-</div>
-
-<div class="chapter-card">
-  <h3>Chapter 5</h3>
-  <p>Magnetism and Matter</p>
-  <a class="btn" href="#chapter5">Open Notes</a>
-</div>
-
-<div class="chapter-card">
-  <h3>Chapter 6</h3>
-  <p>Electromagnetic Induction</p>
-  <a class="btn" href="#chapter6">Open Notes</a>
-</div>
-
-<div class="chapter-card">
-  <h3>Chapter 7</h3>
-  <p>Alternating Current</p>
-  <a class="btn" href="#chapter7">Open Notes</a>
-</div>
-
-<div class="chapter-card">
-  <h3>Chapter 8</h3>
-  <p>Electromagnetic Waves</p>
-  <a class="btn" href="#chapter8">Open Notes</a>
-</div>
-
-<div class="chapter-card">
-  <h3>Chapter 9</h3>
-  <p>Ray Optics and Optical Instruments</p>
-  <a class="btn" href="#chapter9">Open Notes</a>
-</div>
-
-<div class="chapter-card">
-  <h3>Chapter 10</h3>
-  <p>Wave Optics</p>
-  <a class="btn" href="#chapter10">Open Notes</a>
-</div>
-
-<div class="chapter-card">
-  <h3>Chapter 11</h3>
-  <p>Dual Nature of Radiation and Matter</p>
-  <a class="btn" href="#chapter11">Open Notes</a>
-</div>
-
-<div class="chapter-card">
-  <h3>Chapter 12</h3>
-  <p>Atoms</p>
-  <a class="btn" href="#chapter12">Open Notes</a>
-</div>
-
-<div class="chapter-card">
-  <h3>Chapter 13</h3>
-  <p>Nuclei</p>
-  <a class="btn" href="#chapter13">Open Notes</a>
-</div>
-
-<div class="chapter-card">
-  <h3>Chapter 14</h3>
-  <p>Semiconductor Electronics</p>
-  <a class="btn" href="#chapter14">Open Notes</a>
-</div>
-
-  </div>  <!-- CHAPTER 1 -->  <section class="chapter" id="chapter1"><h2>⚡ Chapter 1: Electric Charges and Fields</h2>
-
-<h3>Electric Charge</h3>
+<h2>1. Electric Charge</h2>
 
 <p>
-  Electric charge is a physical property of matter responsible for
-  electric interaction. There are two types of charge: positive and negative.
+Electric charge is a fundamental property of matter responsible for
+electrical interaction.
 </p>
-
-<h3>Coulomb's Law</h3>
-
-<div class="formula">
-  F = (1 / 4πε₀) × (q₁q₂ / r²)
-</div>
-
-<h3>Electric Field</h3>
-
-<div class="formula">
-  E = F / q₀
-</div>
-
-<div class="formula">
-  E = (1 / 4πε₀) × (q / r²)
-</div>
-
-<h3>Electric Flux</h3>
-
-<div class="formula">
-  Φ = EA cosθ
-</div>
-
-<h3>Gauss's Law</h3>
-
-<div class="formula">
-  Φ = q<sub>enclosed</sub> / ε₀
-</div>
-
-<div class="important">
-  ⭐ Important: Coulomb's law, electric field, electric dipole,
-  electric flux and Gauss's law.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 2 -->  <section class="chapter" id="chapter2"><h2>⚡ Chapter 2: Electrostatic Potential and Capacitance</h2>
-
-<h3>Electric Potential</h3>
-
-<div class="formula">
-  V = W / q
-</div>
-
-<h3>Potential Due to Point Charge</h3>
-
-<div class="formula">
-  V = (1 / 4πε₀) × (q / r)
-</div>
-
-<h3>Capacitance</h3>
-
-<div class="formula">
-  C = Q / V
-</div>
-
-<h3>Parallel Plate Capacitor</h3>
-
-<div class="formula">
-  C = ε₀A / d
-</div>
-
-<h3>Energy Stored</h3>
-
-<div class="formula">
-  U = 1/2 CV²
-</div>
-
-<div class="formula">
-  U = Q² / 2C
-</div>
-
-<div class="important">
-  ⭐ Important: Potential, equipotential surfaces, capacitance,
-  combination of capacitors and energy stored.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 3 -->  <section class="chapter" id="chapter3"><h2>🔋 Chapter 3: Current Electricity</h2>
-
-<h3>Electric Current</h3>
-
-<div class="formula">
-  I = Q / t
-</div>
-
-<h3>Ohm's Law</h3>
-
-<div class="formula">
-  V = IR
-</div>
-
-<h3>Resistance</h3>
-
-<div class="formula">
-  R = ρL / A
-</div>
-
-<h3>Electrical Power</h3>
-
-<div class="formula">
-  P = VI
-</div>
-
-<div class="formula">
-  P = I²R = V²/R
-</div>
-
-<div class="important">
-  ⭐ Important: Ohm's law, resistivity, Kirchhoff's laws,
-  Wheatstone bridge and electrical power.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 4 -->  <section class="chapter" id="chapter4"><h2>🧲 Chapter 4: Moving Charges and Magnetism</h2>
-
-<h3>Magnetic Force</h3>
-
-<div class="formula">
-  F = qvB sinθ
-</div>
-
-<h3>Force on Current Carrying Wire</h3>
-
-<div class="formula">
-  F = BIL sinθ
-</div>
-
-<h3>Motion in Magnetic Field</h3>
-
-<div class="formula">
-  r = mv / qB
-</div>
-
-<div class="important">
-  ⭐ Important: Lorentz force, Biot-Savart law, Ampere's law
-  and motion of charged particles in magnetic field.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 5 -->  <section class="chapter" id="chapter5"><h2>🧲 Chapter 5: Magnetism and Matter</h2>
-
-<h3>Magnetic Dipole</h3>
-
-<div class="formula">
-  Magnetic moment = m × 2l
-</div>
-
-<h3>Important Topics</h3>
 
 <ul>
-  <li>Magnetic field</li>
-  <li>Magnetic materials</li>
-  <li>Earth's magnetism</li>
-  <li>Diamagnetic materials</li>
-  <li>Paramagnetic materials</li>
-  <li>Ferromagnetic materials</li>
+<li>SI unit → Coulomb (C)</li>
+<li>Charge of electron → −1.6 × 10⁻¹⁹ C</li>
+<li>Charge of proton → +1.6 × 10⁻¹⁹ C</li>
 </ul>
 
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 6 -->  <section class="chapter" id="chapter6"><h2>⚡ Chapter 6: Electromagnetic Induction</h2>
-
-<h3>Faraday's Law</h3>
-
-<div class="formula">
-  ε = −dΦ/dt
-</div>
-
-<h3>Lenz's Law</h3>
-
-<p>
-  The induced current always opposes the change in magnetic flux
-  that produces it.
-</p>
-
-<div class="important">
-  ⭐ Important: Faraday's laws, Lenz's law, motional emf and
-  self-induction.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 7 -->  <section class="chapter" id="chapter7"><h2>〰️ Chapter 7: Alternating Current</h2>
-
-<h3>AC Voltage</h3>
-
-<div class="formula">
-  V = V₀ sinωt
-</div>
-
-<h3>RMS Value</h3>
-
-<div class="formula">
-  V<sub>rms</sub> = V₀ / √2
-</div>
-
-<div class="formula">
-  I<sub>rms</sub> = I₀ / √2
-</div>
-
-<div class="important">
-  ⭐ Important: RMS value, reactance, impedance, resonance
-  and transformer.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 8 -->  <section class="chapter" id="chapter8"><h2>📡 Chapter 8: Electromagnetic Waves</h2>
-
-<p>
-  Electromagnetic waves are produced by accelerating charges
-  and consist of electric and magnetic fields oscillating
-  perpendicular to each other.
-</p>
-
-<div class="formula">
-  c = 1 / √(μ₀ε₀)
-</div>
-
-<div class="important">
-  ⭐ Important: Electromagnetic spectrum, properties of EM waves
-  and applications.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 9 -->  <section class="chapter" id="chapter9"><h2>🔭 Chapter 9: Ray Optics and Optical Instruments</h2>
-
-<h3>Mirror Formula</h3>
-
-<div class="formula">
-  1/f = 1/v + 1/u
-</div>
-
-<h3>Lens Formula</h3>
-
-<div class="formula">
-  1/f = 1/v − 1/u
-</div>
-
-<h3>Magnification</h3>
-
-<div class="formula">
-  m = v/u
-</div>
-
-<div class="important">
-  ⭐ Important: Mirror, lens, refraction, total internal reflection
-  and optical instruments.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 10 -->  <section class="chapter" id="chapter10"><h2>🌊 Chapter 10: Wave Optics</h2>
-
-<h3>Young's Double Slit Experiment</h3>
-
-<div class="formula">
-  β = λD / d
-</div>
-
-<h3>Constructive Interference</h3>
-
-<div class="formula">
-  Path difference = nλ
-</div>
-
-<div class="important">
-  ⭐ Important: Interference, YDSE, diffraction and polarization.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 11 -->  <section class="chapter" id="chapter11"><h2>💡 Chapter 11: Dual Nature of Radiation and Matter</h2>
-
-<h3>Photon Energy</h3>
-
-<div class="formula">
-  E = hν
-</div>
-
-<h3>Photoelectric Equation</h3>
-
-<div class="formula">
-  K<sub>max</sub> = hν − φ
-</div>
-
-<h3>de Broglie Wavelength</h3>
-
-<div class="formula">
-  λ = h/p
-</div>
-
-<div class="important">
-  ⭐ Important: Photoelectric effect, Einstein's equation
-  and de Broglie hypothesis.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 12 -->  <section class="chapter" id="chapter12"><h2>⚛️ Chapter 12: Atoms</h2>
-
-<h3>Bohr's Energy</h3>
-
-<div class="formula">
-  Eₙ = −13.6/n² eV
-</div>
-
-<h3>Bohr Radius</h3>
-
-<div class="formula">
-  rₙ ∝ n²
-</div>
-
-<div class="important">
-  ⭐ Important: Rutherford model, Bohr model, atomic spectra
-  and hydrogen atom.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 13 -->  <section class="chapter" id="chapter13"><h2>☢️ Chapter 13: Nuclei</h2>
-
-<h3>Mass-Energy Relation</h3>
-
-<div class="formula">
-  E = mc²
-</div>
-
-<h3>Radioactive Decay</h3>
-
-<div class="formula">
-  N = N₀e<sup>−λt</sup>
-</div>
-
-<h3>Half-Life</h3>
-
-<div class="formula">
-  T<sub>1/2</sub> = 0.693 / λ
-</div>
-
-<div class="important">
-  ⭐ Important: Nuclear force, mass defect, binding energy,
-  radioactivity and nuclear fission/fusion.
-</div>
-
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
-</div>
-
-  </section>  <!-- CHAPTER 14 -->  <section class="chapter" id="chapter14"><h2>💻 Chapter 14: Semiconductor Electronics</h2>
-
-<h3>Important Topics</h3>
+<h2>2. Properties of Charge</h2>
 
 <ul>
-  <li>Intrinsic and extrinsic semiconductors</li>
-  <li>p-type and n-type semiconductors</li>
-  <li>p-n junction</li>
-  <li>Diode</li>
-  <li>Rectifier</li>
-  <li>Logic gates</li>
+<li>Conservation of charge</li>
+<li>Quantisation of charge</li>
+<li>Additivity of charge</li>
+</ul>
+
+<div class="formula">
+q = ne
+</div>
+
+<h2>3. Coulomb's Law</h2>
+
+<p>
+The electrostatic force between two point charges is directly
+proportional to the product of their charges and inversely proportional
+to the square of the distance between them.
+</p>
+
+<div class="formula">
+F = (1/4πε₀) × (q₁q₂/r²)
+</div>
+
+<h2>4. Electric Field</h2>
+
+<p>
+Electric field at a point is the force experienced by a unit positive
+test charge placed at that point.
+</p>
+
+<div class="formula">
+E = F/q
+</div>
+
+<p>For a point charge:</p>
+
+<div class="formula">
+E = (1/4πε₀) × q/r²
+</div>
+
+<h2>5. Superposition Principle</h2>
+
+<p>
+The net electric field due to several charges is the vector sum of
+the electric fields produced by individual charges.
+</p>
+
+<div class="formula">
+E⃗net = E⃗₁ + E⃗₂ + E⃗₃ + ...
+</div>
+
+<h2>6. Electric Dipole</h2>
+
+<p>
+An electric dipole consists of two equal and opposite charges separated
+by a small distance.
+</p>
+
+<div class="formula">
+p = q × 2a
+</div>
+
+<p>
+Direction of dipole moment is from negative charge to positive charge.
+</p>
+
+<h2>7. Torque on Dipole</h2>
+
+<div class="formula">
+τ = pE sinθ
+</div>
+
+<h2>8. Electric Flux</h2>
+
+<div class="formula">
+Φ = E A cosθ
+</div>
+
+<h2>9. Gauss's Law</h2>
+
+<div class="formula">
+Φ = q enclosed / ε₀
+</div>
+
+<p>
+Gauss's law relates the electric flux through a closed surface to the
+net charge enclosed by that surface.
+</p>
+
+<h2>10. Applications of Gauss's Law</h2>
+
+<ul>
+<li>Infinite line charge</li>
+<li>Infinite plane sheet</li>
+<li>Spherical shell</li>
+</ul>
+
+<h3>Infinite Line Charge</h3>
+
+<div class="formula">
+E = λ / (2πε₀r)
+</div>
+
+<h3>Infinite Plane Sheet</h3>
+
+<div class="formula">
+E = σ / (2ε₀)
+</div>
+
+<div class="important">
+⭐ Important derivations: Electric field due to infinite line charge,
+plane sheet and spherical shell.
+</div>
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+1. State Coulomb's law.
+</div>
+
+<div class="question">
+2. Define electric field and electric flux.
+</div>
+
+<div class="question">
+3. Explain Gauss's law.
+</div>
+
+<div class="question">
+4. Derive electric field due to an infinite plane sheet.
+</div>
+
+<div class="question">
+5. Derive torque on an electric dipole.
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 2 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+2️⃣ Electrostatic Potential and Capacitance
+</div>
+
+<div class="notes">
+
+<h2>1. Electric Potential</h2>
+
+<p>
+Electric potential at a point is the work done per unit positive test
+charge in bringing it from infinity to that point.
+</p>
+
+<div class="formula">
+V = W/q
+</div>
+
+<h2>2. Potential Due to Point Charge</h2>
+
+<div class="formula">
+V = (1/4πε₀) × q/r
+</div>
+
+<h2>3. Potential Difference</h2>
+
+<div class="formula">
+ΔV = W/q
+</div>
+
+<h2>4. Relation Between Electric Field and Potential</h2>
+
+<div class="formula">
+E = −dV/dr
+</div>
+
+<h2>5. Potential Energy</h2>
+
+<p>
+Potential energy of two point charges is:</p>
+
+<div class="formula">
+U = (1/4πε₀) × q₁q₂/r
+</div>
+
+<h2>6. Electric Dipole Potential</h2>
+
+<div class="formula">
+V = (1/4πε₀) × (p cosθ/r²)
+</div>
+
+<h2>7. Capacitance</h2>
+
+<p>
+Capacitance is the ability of a conductor to store electric charge.
+</p>
+
+<div class="formula">
+C = Q/V
+</div>
+
+<h2>8. Parallel Plate Capacitor</h2>
+
+<div class="formula">
+C = ε₀A/d
+</div>
+
+<p>
+With dielectric:</p>
+
+<div class="formula">
+C = Kε₀A/d
+</div>
+
+<h2>9. Combination of Capacitors</h2>
+
+<h3>Parallel</h3>
+
+<div class="formula">
+Ceq = C₁ + C₂ + C₃ + ...
+</div>
+
+<h3>Series</h3>
+
+<div class="formula">
+1/Ceq = 1/C₁ + 1/C₂ + 1/C₃ + ...
+</div>
+
+<h2>10. Energy Stored in Capacitor</h2>
+
+<div class="formula">
+U = ½CV²
+</div>
+
+<p>Other forms:</p>
+
+<div class="formula">
+U = ½QV = Q²/(2C)
+</div>
+
+<div class="important">
+⭐ Inserting a dielectric between capacitor plates increases capacitance.
+</div>
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+1. Define electric potential.
+</div>
+
+<div class="question">
+2. Derive capacitance of a parallel plate capacitor.
+</div>
+
+<div class="question">
+3. Derive energy stored in a capacitor.
+</div>
+
+<div class="question">
+4. Explain series and parallel combination of capacitors.
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 3 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+3️⃣ Current Electricity
+</div>
+
+<div class="notes">
+
+<h2>1. Electric Current</h2>
+
+<p>
+Electric current is the rate of flow of electric charge.
+</p>
+
+<div class="formula">
+I = Q/t
+</div>
+
+<h2>2. Drift Velocity</h2>
+
+<p>
+The average velocity acquired by free electrons in a conductor due
+to an applied electric field is called drift velocity.
+</p>
+
+<div class="formula">
+I = neAvd
+</div>
+
+<h2>3. Ohm's Law</h2>
+
+<div class="formula">
+V = IR
+</div>
+
+<p>
+At constant physical conditions, current through a conductor is
+directly proportional to the potential difference across it.
+</p>
+
+<h2>4. Resistance</h2>
+
+<div class="formula">
+R = ρL/A
+</div>
+
+<p>
+Resistance depends on length, area, material and temperature.
+</p>
+
+<h2>5. Resistivity</h2>
+
+<p>
+Resistivity is a property of the material of the conductor.
+</p>
+
+<div class="formula">
+ρ = RA/L
+</div>
+
+<h2>6. Series Combination</h2>
+
+<div class="formula">
+Req = R₁ + R₂ + R₃ + ...
+</div>
+
+<h2>7. Parallel Combination</h2>
+
+<div class="formula">
+1/Req = 1/R₁ + 1/R₂ + 1/R₃ + ...
+</div>
+
+<h2>8. Electrical Power</h2>
+
+<div class="formula">
+P = VI
+</div>
+
+<div class="formula">
+P = I²R
+</div>
+
+<div class="formula">
+P = V²/R
+</div>
+
+<h2>9. Kirchhoff's Laws</h2>
+
+<h3>Junction Rule</h3>
+
+<div class="formula">
+ΣI = 0
+</div>
+
+<p>
+Total current entering a junction equals total current leaving it.
+</p>
+
+<h3>Loop Rule</h3>
+
+<div class="formula">
+ΣΔV = 0
+</div>
+
+<p>
+The algebraic sum of potential changes around a closed loop is zero.
+</p>
+
+<h2>10. Wheatstone Bridge</h2>
+
+<div class="formula">
+P/Q = R/S
+</div>
+
+<p>
+At balance, no current flows through the galvanometer.
+</p>
+
+<h2>11. Meter Bridge</h2>
+
+<p>
+A meter bridge works on the principle of Wheatstone bridge and is used
+to determine unknown resistance.
+</p>
+
+<div class="important">
+⭐ Important numerical topics: series-parallel resistance,
+Kirchhoff laws, Wheatstone bridge and electrical power.
+</div>
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+1. State and explain Ohm's law.
+</div>
+
+<div class="question">
+2. Derive R = ρL/A.
+</div>
+
+<div class="question">
+3. State Kirchhoff's laws.
+</div>
+
+<div class="question">
+4. Explain Wheatstone bridge.
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 4 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+4️⃣ Moving Charges and Magnetism
+</div>
+
+<div class="notes">
+
+<h2>1. Magnetic Force</h2>
+
+<p>
+A charged particle moving in a magnetic field experiences a magnetic force.
+</p>
+
+<div class="formula">
+F = qvB sinθ
+</div>
+
+<p>
+If the velocity is perpendicular to the magnetic field:</p>
+
+<div class="formula">
+F = qvB
+</div>
+
+<h2>2. Force on Current Carrying Wire</h2>
+
+<div class="formula">
+F = BIL sinθ
+</div>
+
+<h2>3. Motion of Charged Particle</h2>
+
+<p>
+When a charged particle enters a uniform magnetic field perpendicular
+to its velocity, it moves in a circular path.
+</p>
+
+<div class="formula">
+r = mv/qB
+</div>
+
+<h2>4. Time Period</h2>
+
+<div class="formula">
+T = 2πm/qB
+</div>
+
+<h2>5. Biot-Savart Law</h2>
+
+<div class="formula">
+dB = (μ₀/4π) × (I dl sinθ/r²)
+</div>
+
+<h2>6. Magnetic Field Due to Long Straight Wire</h2>
+
+<div class="formula">
+B = μ₀I/(2πr)
+</div>
+
+<h2>7. Force Between Parallel Currents</h2>
+
+<div class="formula">
+F/L = μ₀I₁I₂/(2πd)
+</div>
+
+<h2>8. Torque on Current Loop</h2>
+
+<div class="formula">
+τ = NIAB sinθ
+</div>
+
+<h2>9. Moving Coil Galvanometer</h2>
+
+<p>
+A moving coil galvanometer is used to detect and measure small currents.
+</p>
+
+<div class="formula">
+τ = NIAB
+</div>
+
+<h2>10. Conversion of Galvanometer</h2>
+
+<ul>
+<li>Galvanometer → Ammeter using low resistance shunt</li>
+<li>Galvanometer → Voltmeter using high resistance in series</li>
 </ul>
 
 <div class="important">
-  ⭐ Important: Semiconductor, p-n junction diode,
-  rectifier and logic gates.
+⭐ Remember: A magnetic field can change the direction of velocity of
+a charged particle but does no work on the particle.
 </div>
 
-<div class="top">
-  <a href="#top">↑ Back to Chapters</a>
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+1. Derive the radius of circular motion of a charged particle in magnetic field.
 </div>
 
-  </section></div><footer>
-  <p>© 2026 Student Hub | Learn • Practice • Improve</p>
-</footer></body>
+<div class="question">
+2. State Biot-Savart law.
+</div>
+
+<div class="question">
+3. Derive force between two parallel current-carrying conductors.
+</div>
+
+<div class="question">
+4. Explain moving coil galvanometer.
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 5 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+5️⃣ Magnetism and Matter
+</div>
+
+<div class="notes">
+
+<h2>1. Magnetic Field</h2>
+
+<p>
+The region around a magnet or current-carrying conductor where magnetic
+effects can be observed is called a magnetic field.
+</p>
+
+<h2>2. Magnetic Dipole</h2>
+
+<p>
+A bar magnet behaves approximately like a magnetic dipole.
+</p>
+
+<h2>3. Magnetic Dipole Moment</h2>
+
+<div class="formula">
+M = m × 2l
+</div>
+
+<h2>4. Torque on Magnetic Dipole</h2>
+
+<div class="formula">
+τ = MB sinθ
+</div>
+
+<h2>5. Potential Energy</h2>
+
+<div class="formula">
+U = −MB cosθ
+</div>
+
+<h2>6. Types of Magnetic Materials</h2>
+
+<ul>
+<li>Diamagnetic</li>
+<li>Paramagnetic</li>
+<li>Ferromagnetic</li>
+</ul>
+
+<h3>Diamagnetic</h3>
+
+<p>
+Weakly repelled by a magnetic field.
+</p>
+
+<h3>Paramagnetic</h3>
+
+<p>
+Weakly attracted by a magnetic field.
+</p>
+
+<h3>Ferromagnetic</h3>
+
+<p>
+Strongly attracted by a magnetic field and can retain magnetisation.
+</p>
+
+<div class="important">
+⭐ Examples: Diamagnetic → copper, Paramagnetic → aluminium,
+Ferromagnetic → iron.
+</div>
+
+<h2>7. Earth as a Magnet</h2>
+
+<p>
+Earth has its own magnetic field. The magnetic elements include
+declination, dip and horizontal component.
+</p>
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+1. Define magnetic dipole moment.
+</div>
+
+<div class="question">
+2. Explain diamagnetic, paramagnetic and ferromagnetic substances.
+</div>
+
+<div class="question">
+3. Derive torque acting on a magnetic dipole.
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 6 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+6️⃣ Electromagnetic Induction
+</div>
+
+<div class="notes">
+
+<h2>1. Electromagnetic Induction</h2>
+
+<p>
+The phenomenon of production of induced emf due to a change in magnetic
+flux linked with a circuit is called electromagnetic induction.
+</p>
+
+<h2>2. Magnetic Flux</h2>
+
+<div class="formula">
+Φ = BA cosθ
+</div>
+
+<h2>3. Faraday's Law</h2>
+
+<div class="formula">
+ε = −dΦ/dt
+</div>
+
+<p>
+The negative sign represents Lenz's law.
+</p>
+
+<h2>4. Lenz's Law</h2>
+
+<p>
+The induced current flows in a direction that opposes the change in
+magnetic flux responsible for producing it.
+</p>
+
+<h2>5. Motional EMF</h2>
+
+<div class="formula">
+ε = Blv
+</div>
+
+<h2>6. Self Inductance</h2>
+
+<div class="formula">
+ε = −L(di/dt)
+</div>
+
+<h2>7. Energy Stored in Inductor</h2>
+
+<div class="formula">
+U = ½LI²
+</div>
+
+<div class="important">
+⭐ Lenz's law follows from conservation of energy.
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 7 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+7️⃣ Alternating Current
+</div>
+
+<div class="notes">
+
+<h2>AC Voltage</h2>
+
+<div class="formula">
+V = V₀ sinωt
+</div>
+
+<h2>RMS Value</h2>
+
+<div class="formula">
+Vrms = V₀/√2
+</div>
+
+<div class="formula">
+Irms = I₀/√2
+</div>
+
+<h2>Reactance</h2>
+
+<h3>Inductive Reactance</h3>
+
+<div class="formula">
+XL = ωL
+</div>
+
+<h3>Capacitive Reactance</h3>
+
+<div class="formula">
+XC = 1/ωC
+</div>
+
+<h2>Impedance</h2>
+
+<div class="formula">
+Z = √[R² + (XL − XC)²]
+</div>
+
+<h2>Power in AC Circuit</h2>
+
+<div class="formula">
+P = Vrms Irms cosφ
+</div>
+
+<h2>Resonance</h2>
+
+<p>
+In a series LCR circuit, resonance occurs when inductive reactance
+equals capacitive reactance.
+</p>
+
+<div class="formula">
+XL = XC
+</div>
+
+<div class="formula">
+ω₀ = 1/√LC
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 8 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+8️⃣ Electromagnetic Waves
+</div>
+
+<div class="notes">
+
+<h2>Electromagnetic Waves</h2>
+
+<p>
+Electromagnetic waves consist of oscillating electric and magnetic
+fields which are perpendicular to each other and to the direction
+of propagation.
+</p>
+
+<div class="formula">
+c = 1/√(μ₀ε₀)
+</div>
+
+<h2>Electromagnetic Spectrum</h2>
+
+<ol>
+<li>Radio waves</li>
+<li>Microwaves</li>
+<li>Infrared</li>
+<li>Visible light</li>
+<li>Ultraviolet</li>
+<li>X-rays</li>
+<li>Gamma rays</li>
+</ol>
+
+<div class="important">
+⭐ Electromagnetic waves do not require a material medium for propagation.
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 9 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+9️⃣ Ray Optics and Optical Instruments
+</div>
+
+<div class="notes">
+
+<h2>1. Reflection</h2>
+
+<p>
+Reflection is the bouncing back of light from a surface.
+</p>
+
+<div class="formula">
+i = r
+</div>
+
+<h2>2. Mirror Formula</h2>
+
+<div class="formula">
+1/f = 1/v + 1/u
+</div>
+
+<h2>3. Magnification</h2>
+
+<div class="formula">
+m = −v/u
+</div>
+
+<h2>4. Refraction</h2>
+
+<div class="formula">
+n₁ sin i = n₂ sin r
+</div>
+
+<p>
+This is Snell's law.
+</p>
+
+<h2>5. Lens Formula</h2>
+
+<div class="formula">
+1/f = 1/v − 1/u
+</div>
+
+<h2>6. Lens Magnification</h2>
+
+<div class="formula">
+m = v/u
+</div>
+
+<h2>7. Power of Lens</h2>
+
+<div class="formula">
+P = 1/f
+</div>
+
+<p>
+Here f must be in metres and power is measured in dioptre.
+</p>
+
+<h2>8. Total Internal Reflection</h2>
+
+<p>
+When light travels from a denser medium to a rarer medium and the
+angle of incidence exceeds the critical angle, total internal
+reflection occurs.
+</p>
+
+<h2>9. Optical Instruments</h2>
+
+<ul>
+<li>Microscope</li>
+<li>Telescope</li>
+<li>Human eye</li>
+</ul>
+
+<div class="important">
+⭐ Important topics: mirror formula, lens formula, refraction,
+total internal reflection and optical instruments.
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 10 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+🔟 Wave Optics
+</div>
+
+<div class="notes">
+
+<h2>1. Wave Nature of Light</h2>
+
+<p>
+Wave optics explains phenomena such as interference, diffraction
+and polarisation.
+</p>
+
+<h2>2. Interference</h2>
+
+<p>
+Interference is the redistribution of intensity produced when two
+coherent waves superpose.
+</p>
+
+<h2>3. Young's Double Slit Experiment</h2>
+
+<div class="formula">
+β = λD/d
+</div>
+
+<p>
+β is fringe width.
+</p>
+
+<h2>4. Constructive Interference</h2>
+
+<div class="formula">
+Path difference = nλ
+</div>
+
+<h2>5. Destructive Interference</h2>
+
+<div class="formula">
+Path difference = (2n+1)λ/2
+</div>
+
+<h2>6. Diffraction</h2>
+
+<p>
+Diffraction is the bending/spreading of waves around obstacles or
+through narrow apertures.
+</p>
+
+<h2>7. Polarisation</h2>
+
+<p>
+Polarisation demonstrates the transverse nature of light.
+</p>
+
+<div class="important">
+⭐ Young's double slit experiment is an important proof of the
+wave nature of light.
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 11 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+1️⃣1️⃣ Dual Nature of Radiation and Matter
+</div>
+
+<div class="notes">
+
+<h2>Photoelectric Effect</h2>
+
+<p>
+The emission of electrons from a metal surface when electromagnetic
+radiation of suitable frequency falls on it is called photoelectric effect.
+</p>
+
+<h2>Einstein's Photoelectric Equation</h2>
+
+<div class="formula">
+hν = φ + Kmax
+</div>
+
+<div class="formula">
+Kmax = hν − φ
+</div>
+
+<h2>Work Function</h2>
+
+<p>
+Minimum energy required to remove an electron from a metal surface.
+</p>
+
+<div class="formula">
+φ = hν₀
+</div>
+
+<h2>de Broglie Wavelength</h2>
+
+<div class="formula">
+λ = h/p
+</div>
+
+<div class="formula">
+λ = h/mv
+</div>
+
+<div class="important">
+⭐ Increasing intensity increases photoelectric current when frequency
+is above threshold, while maximum kinetic energy depends on frequency.
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 12 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+1️⃣2️⃣ Atoms
+</div>
+
+<div class="notes">
+
+<h2>Bohr Model</h2>
+
+<p>
+Bohr proposed that electrons revolve around the nucleus in certain
+allowed stationary orbits.
+</p>
+
+<h2>Bohr's Angular Momentum Condition</h2>
+
+<div class="formula">
+mvr = nh/2π
+</div>
+
+<h2>Radius of nth Orbit</h2>
+
+<div class="formula">
+rn ∝ n²
+</div>
+
+<h2>Energy of Hydrogen Atom</h2>
+
+<div class="formula">
+En = −13.6/n² eV
+</div>
+
+<h2>Hydrogen Spectrum</h2>
+
+<div class="formula">
+1/λ = R(1/n₁² − 1/n₂²)
+</div>
+
+<p>
+where n₂ > n₁.
+</p>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 13 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+1️⃣3️⃣ Nuclei
+</div>
+
+<div class="notes">
+
+<h2>1. Atomic Nucleus</h2>
+
+<p>
+The nucleus contains protons and neutrons. Together they are called nucleons.
+</p>
+
+<h2>2. Nuclear Size</h2>
+
+<div class="formula">
+R = R₀A^(1/3)
+</div>
+
+<h2>3. Mass Defect</h2>
+
+<p>
+The difference between the sum of masses of separate nucleons and
+the actual mass of the nucleus is called mass defect.
+</p>
+
+<h2>4. Binding Energy</h2>
+
+<div class="formula">
+E = Δmc²
+</div>
+
+<h2>5. Radioactive Decay</h2>
+
+<div class="formula">
+N = N₀e^(−λt)
+</div>
+
+<h2>6. Half Life</h2>
+
+<div class="formula">
+T½ = 0.693/λ
+</div>
+
+<h2>7. Nuclear Fission</h2>
+
+<p>
+A heavy nucleus splits into lighter nuclei with release of energy.
+</p>
+
+<h2>8. Nuclear Fusion</h2>
+
+<p>
+Two light nuclei combine to form a heavier nucleus with release of energy.
+</p>
+
+<div class="important">
+⭐ Fusion powers stars, while fission is used in nuclear reactors.
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHAPTER 14 ================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+1️⃣4️⃣ Semiconductor Electronics
+</div>
+
+<div class="notes">
+
+<h2>1. Semiconductor</h2>
+
+<p>
+A semiconductor has electrical conductivity between that of a conductor
+and an insulator.
+</p>
+
+<h2>2. Intrinsic Semiconductor</h2>
+
+<p>
+A pure semiconductor without intentional impurity is called intrinsic.
+</p>
+
+<h2>3. Extrinsic Semiconductor</h2>
+
+<p>
+A semiconductor whose conductivity is increased by adding suitable
+impurities is called extrinsic semiconductor.
+</p>
+
+<h2>4. n-Type</h2>
+
+<p>
+Pentavalent impurity produces an n-type semiconductor. Electrons are
+the majority carriers.
+</p>
+
+<h2>5. p-Type</h2>
+
+<p>
+Trivalent impurity produces a p-type semiconductor. Holes are the
+majority carriers.
+</p>
+
+<h2>6. p-n Junction</h2>
+
+<p>
+A p-n junction is formed when p-type and n-type semiconductor regions
+are joined.
+</p>
+
+<h2>7. Diode</h2>
+
+<p>
+A diode allows current mainly in one direction.
+</p>
+
+<h2>8. LED</h2>
+
+<p>
+A light-emitting diode emits light when forward biased.
+</p>
+
+<h2>9. Solar Cell</h2>
+
+<p>
+A solar cell converts light energy into electrical energy using the
+photovoltaic effect.
+</p>
+
+<h2>10. Logic Gates</h2>
+
+<ul>
+<li>AND</li>
+<li>OR</li>
+<li>NOT</li>
+<li>NAND</li>
+<li>NOR</li>
+</ul>
+
+<div class="important">
+⭐ NAND and NOR are called universal logic gates because other basic
+logic functions can be constructed using them.
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<footer>
+<p>© 2026 Student Hub</p>
+<p>Class 12 Physics • Detailed Notes</p>
+</footer>
+
+
+<script>
+
+function toggle(element){
+
+    let notes = element.nextElementSibling;
+
+    if(notes.style.display === "block"){
+        notes.style.display = "none";
+    }
+    else{
+        notes.style.display = "block";
+    }
+}
+
+
+function searchNotes(){
+
+    let input =
+    document.getElementById("search").value.toLowerCase();
+
+    let chapters =
+    document.querySelectorAll(".chapter");
+
+    chapters.forEach(function(chapter){
+
+        let text =
+        chapter.innerText.toLowerCase();
+
+        if(text.includes(input)){
+            chapter.style.display = "block";
+        }
+        else{
+            chapter.style.display = "none";
+        }
+
+    });
+}
+
+</script>
+
+</body>
 </html>

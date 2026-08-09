@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -190,6 +191,7 @@
       <input
         type="text"
         id="searchBox"
+        onkeyup="searchContent()"
         placeholder="Search Physics, Chemistry, Biology..."
       >
 
@@ -294,87 +296,52 @@
 
 
   <script>
-
     function searchContent() {
+      let input = document.getElementById("searchBox").value.toLowerCase().trim();
+      let cards = document.getElementsByClassName("card");
 
-      let query = document.getElementById("searchBox").value;
-
-      if (query.trim() === "") {
-        alert("Please type something to search.");
-      } else {
-        alert("Search feature coming soon for: " + query);
+      for (let i = 0; i < cards.length; i++) {
+        let cardText = cards[i].innerText.toLowerCase();
+        
+        if (cardText.includes(input)) {
+          cards[i].style.display = "block";
+        } else {
+          cards[i].style.display = "none";
+        }
       }
-
     }
-
 
     function openSubject(subject) {
       alert(subject + " section coming soon!");
     }
 
-
     function openClass(classNumber) {
       alert("Class " + classNumber + " section coming soon!");
     }
 
-
     function percentage() {
-
       let obtained = prompt("Enter obtained marks:");
       let total = prompt("Enter total marks:");
 
       if (obtained && total) {
-
         let result = (Number(obtained) / Number(total)) * 100;
-
         alert("Your percentage is: " + result.toFixed(2) + "%");
-
       }
-
     }
 
-
     function cgpa() {
-
       let marks = prompt("Enter your percentage:");
 
       if (marks) {
-
         let result = Number(marks) / 9.5;
-
         alert("Approximate CGPA: " + result.toFixed(2));
-
       }
-
     }
-
 
     function mcq() {
-
       alert("MCQ Practice section coming soon!");
-
     }
-
   </script>
-<script>
-    function searchSubjects() {
-        // Search bar ka value get karein
-        let input = document.getElementById('searchInput').value.toLowerCase();
-        // Cards get karein (make sure aapke cards me class="subject-card" ho)
-        let cards = document.getElementsByClassName('subject-card');
-
-        for (let i = 0; i < cards.length; i++) {
-            let cardText = cards[i].innerText.toLowerCase();
-            
-            // Match hone par show, warna hide
-            if (cardText.includes(input)) {
-                cards[i].style.display = "block";
-            } else {
-                cards[i].style.display = "none";
-            }
-        }
-    }
-</script>
 
 </body>
 </html>

@@ -356,6 +356,25 @@
     }
 
   </script>
+<script>
+    function searchSubjects() {
+        // Search bar ka value get karein
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        // Cards get karein (make sure aapke cards me class="subject-card" ho)
+        let cards = document.getElementsByClassName('subject-card');
+
+        for (let i = 0; i < cards.length; i++) {
+            let cardText = cards[i].innerText.toLowerCase();
+            
+            // Match hone par show, warna hide
+            if (cardText.includes(input)) {
+                cards[i].style.display = "block";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
 
 </body>
 </html>

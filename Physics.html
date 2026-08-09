@@ -1,32 +1,37 @@
+
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Physics - Student Hub</title><meta name="description"
-content="Class 12 Physics notes, formulas, important topics and MCQs for students.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Class 12 Physics Notes - Student Hub</title><meta name="description"
+content="Class 12 Physics chapter-wise notes, formulas, important topics and MCQs.">
 
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #1f2937;
+      background: #f5f7fb;
+      color: #172033;
       line-height: 1.6;
     }
 
     header {
       background: linear-gradient(135deg, #2563eb, #4f46e5);
       color: white;
-      padding: 35px 20px;
       text-align: center;
+      padding: 40px 20px;
     }
 
     header h1 {
-      font-size: 35px;
+      font-size: 34px;
       margin-bottom: 8px;
     }
 
@@ -36,277 +41,623 @@ content="Class 12 Physics notes, formulas, important topics and MCQs for student
 
     .container {
       width: 92%;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 25px auto;
     }
 
     .back {
       display: inline-block;
-      text-decoration: none;
       background: white;
       color: #2563eb;
+      text-decoration: none;
       padding: 10px 16px;
       border-radius: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     }
 
-    .section-title {
-      text-align: center;
-      margin: 25px 0 18px;
-      font-size: 27px;
-    }
-
-    .chapters {
+    .chapter-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 15px;
+      margin-bottom: 35px;
     }
 
-    .card {
+    .chapter-card {
       background: white;
-      padding: 22px;
+      padding: 20px;
       border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
-    .card h3 {
+    .chapter-card h3 {
       color: #2563eb;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    .card p {
-      color: #555;
+    .chapter-card p {
+      color: #667085;
       font-size: 14px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .btn {
       display: inline-block;
-      text-decoration: none;
       background: #2563eb;
       color: white;
-      padding: 9px 15px;
+      text-decoration: none;
+      padding: 8px 14px;
       border-radius: 7px;
-      font-size: 14px;
       font-weight: bold;
+      font-size: 14px;
     }
 
-    .formula-box {
+    .chapter {
       background: white;
-      margin-top: 30px;
       padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      scroll-margin-top: 20px;
     }
 
-    .formula-box h2 {
+    .chapter h2 {
       color: #2563eb;
       margin-bottom: 15px;
+    }
+
+    .chapter h3 {
+      margin-top: 18px;
+      margin-bottom: 8px;
     }
 
     .formula {
       background: #eef4ff;
       padding: 12px;
-      margin: 8px 0;
+      margin: 9px 0;
       border-radius: 8px;
       font-weight: bold;
     }
 
-    .mcq {
-      background: white;
-      margin-top: 25px;
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    .important {
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 7px;
     }
 
-    .mcq h2 {
+    ul {
+      padding-left: 22px;
+    }
+
+    .top {
+      text-align: right;
+      margin-top: 15px;
+    }
+
+    .top a {
       color: #2563eb;
-      margin-bottom: 15px;
-    }
-
-    .question {
-      margin-bottom: 18px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #ddd;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     footer {
-      margin-top: 40px;
       background: #111827;
       color: white;
       text-align: center;
       padding: 25px;
+      margin-top: 35px;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 28px;
+        font-size: 27px;
       }
 
-      .section-title {
-        font-size: 23px;
+      .chapter {
+        padding: 18px;
       }
     }
-  </style></head><body>  <header>
-    <h1>⚡ Physics</h1>
-    <p>Class 12 Physics Notes, Formulas & MCQs</p>
-  </header>  <div class="container"><a class="back" href="index.html">← Back to Student Hub</a>
+  </style></head><body id="top"><header>
+  <h1>⚡ Class 12 Physics</h1>
+  <p>Chapter-wise Notes • Formulas • Important Topics</p>
+</header><div class="container"><a class="back" href="index.html">← Back to Student Hub</a>
 
-<h2 class="section-title">📚 Physics Chapters</h2>
-
-<div class="chapters">
-
-  <div class="card">
-    <h3>Chapter 1: Electric Charges and Fields</h3>
-    <p>Coulomb's law, electric field, electric flux and Gauss's law.</p>
-    <a class="btn" href="Physics-Ch1.html">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 2: Electrostatic Potential and Capacitance</h3>
-    <p>Potential, potential energy, capacitors and capacitance.</p>
-    <a class="btn" href="Physics-Ch2.html">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 3: Current Electricity</h3>
-    <p>Ohm's law, resistance, Kirchhoff's laws and circuits.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 4: Moving Charges and Magnetism</h3>
-    <p>Magnetic field, Lorentz force, Biot-Savart law and Ampere's law.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 5: Magnetism and Matter</h3>
-    <p>Magnetic materials, Earth's magnetism and magnetic properties.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 6: Electromagnetic Induction</h3>
-    <p>Faraday's law, Lenz's law and electromagnetic induction.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 7: Alternating Current</h3>
-    <p>AC voltage, RMS value, reactance, impedance and transformers.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 8: Electromagnetic Waves</h3>
-    <p>Properties, spectrum and applications of electromagnetic waves.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 9: Ray Optics and Optical Instruments</h3>
-    <p>Reflection, refraction, lenses, mirrors and optical instruments.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 10: Wave Optics</h3>
-    <p>Interference, diffraction and polarization of light.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 11: Dual Nature of Radiation and Matter</h3>
-    <p>Photoelectric effect, photons and de Broglie wavelength.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 12: Atoms</h3>
-    <p>Bohr model, atomic spectra and energy levels.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 13: Nuclei</h3>
-    <p>Nuclear forces, radioactivity, binding energy and nuclear reactions.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 14: Semiconductor Electronics</h3>
-    <p>Semiconductors, diodes, transistors and logic gates.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
+  <h2 style="margin-bottom:18px;">📚 Physics Chapters</h2>  <div class="chapter-list"><div class="chapter-card">
+  <h3>Chapter 1</h3>
+  <p>Electric Charges and Fields</p>
+  <a class="btn" href="#chapter1">Open Notes</a>
 </div>
 
-<div class="formula-box">
-  <h2>🧮 Important Physics Formulas</h2>
-
-  <div class="formula">Coulomb's Law: F = k q₁q₂ / r²</div>
-
-  <div class="formula">Electric Field: E = F / q</div>
-
-  <div class="formula">Electric Potential: V = W / q</div>
-
-  <div class="formula">Ohm's Law: V = IR</div>
-
-  <div class="formula">Power: P = VI</div>
-
-  <div class="formula">Magnetic Force: F = qvB sinθ</div>
-
-  <div class="formula">Lens Formula: 1/f = 1/v − 1/u</div>
-
-  <div class="formula">Photoelectric Equation: Kmax = hν − φ</div>
+<div class="chapter-card">
+  <h3>Chapter 2</h3>
+  <p>Electrostatic Potential and Capacitance</p>
+  <a class="btn" href="#chapter2">Open Notes</a>
 </div>
 
-<div class="mcq">
-
-  <h2>📝 Quick MCQs</h2>
-
-  <div class="question">
-    <b>1. SI unit of electric charge is:</b><br>
-    A) Volt<br>
-    B) Coulomb<br>
-    C) Ohm<br>
-    D) Tesla
-    <br><br>
-    <b>Answer: B) Coulomb</b>
-  </div>
-
-  <div class="question">
-    <b>2. According to Ohm's law:</b><br>
-    A) V = IR<br>
-    B) V = I/R<br>
-    C) I = VR<br>
-    D) R = VI
-    <br><br>
-    <b>Answer: A) V = IR</b>
-  </div>
-
-  <div class="question">
-    <b>3. SI unit of magnetic field is:</b><br>
-    A) Weber<br>
-    B) Tesla<br>
-    C) Henry<br>
-    D) Coulomb
-    <br><br>
-    <b>Answer: B) Tesla</b>
-  </div>
-
+<div class="chapter-card">
+  <h3>Chapter 3</h3>
+  <p>Current Electricity</p>
+  <a class="btn" href="#chapter3">Open Notes</a>
 </div>
 
-  </div>  <footer>
-    <p>© 2026 Student Hub | Learn • Practice • Improve</p>
-  </footer></body>
+<div class="chapter-card">
+  <h3>Chapter 4</h3>
+  <p>Moving Charges and Magnetism</p>
+  <a class="btn" href="#chapter4">Open Notes</a>
+</div>
+
+<div class="chapter-card">
+  <h3>Chapter 5</h3>
+  <p>Magnetism and Matter</p>
+  <a class="btn" href="#chapter5">Open Notes</a>
+</div>
+
+<div class="chapter-card">
+  <h3>Chapter 6</h3>
+  <p>Electromagnetic Induction</p>
+  <a class="btn" href="#chapter6">Open Notes</a>
+</div>
+
+<div class="chapter-card">
+  <h3>Chapter 7</h3>
+  <p>Alternating Current</p>
+  <a class="btn" href="#chapter7">Open Notes</a>
+</div>
+
+<div class="chapter-card">
+  <h3>Chapter 8</h3>
+  <p>Electromagnetic Waves</p>
+  <a class="btn" href="#chapter8">Open Notes</a>
+</div>
+
+<div class="chapter-card">
+  <h3>Chapter 9</h3>
+  <p>Ray Optics and Optical Instruments</p>
+  <a class="btn" href="#chapter9">Open Notes</a>
+</div>
+
+<div class="chapter-card">
+  <h3>Chapter 10</h3>
+  <p>Wave Optics</p>
+  <a class="btn" href="#chapter10">Open Notes</a>
+</div>
+
+<div class="chapter-card">
+  <h3>Chapter 11</h3>
+  <p>Dual Nature of Radiation and Matter</p>
+  <a class="btn" href="#chapter11">Open Notes</a>
+</div>
+
+<div class="chapter-card">
+  <h3>Chapter 12</h3>
+  <p>Atoms</p>
+  <a class="btn" href="#chapter12">Open Notes</a>
+</div>
+
+<div class="chapter-card">
+  <h3>Chapter 13</h3>
+  <p>Nuclei</p>
+  <a class="btn" href="#chapter13">Open Notes</a>
+</div>
+
+<div class="chapter-card">
+  <h3>Chapter 14</h3>
+  <p>Semiconductor Electronics</p>
+  <a class="btn" href="#chapter14">Open Notes</a>
+</div>
+
+  </div>  <!-- CHAPTER 1 -->  <section class="chapter" id="chapter1"><h2>⚡ Chapter 1: Electric Charges and Fields</h2>
+
+<h3>Electric Charge</h3>
+
+<p>
+  Electric charge is a physical property of matter responsible for
+  electric interaction. There are two types of charge: positive and negative.
+</p>
+
+<h3>Coulomb's Law</h3>
+
+<div class="formula">
+  F = (1 / 4πε₀) × (q₁q₂ / r²)
+</div>
+
+<h3>Electric Field</h3>
+
+<div class="formula">
+  E = F / q₀
+</div>
+
+<div class="formula">
+  E = (1 / 4πε₀) × (q / r²)
+</div>
+
+<h3>Electric Flux</h3>
+
+<div class="formula">
+  Φ = EA cosθ
+</div>
+
+<h3>Gauss's Law</h3>
+
+<div class="formula">
+  Φ = q<sub>enclosed</sub> / ε₀
+</div>
+
+<div class="important">
+  ⭐ Important: Coulomb's law, electric field, electric dipole,
+  electric flux and Gauss's law.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 2 -->  <section class="chapter" id="chapter2"><h2>⚡ Chapter 2: Electrostatic Potential and Capacitance</h2>
+
+<h3>Electric Potential</h3>
+
+<div class="formula">
+  V = W / q
+</div>
+
+<h3>Potential Due to Point Charge</h3>
+
+<div class="formula">
+  V = (1 / 4πε₀) × (q / r)
+</div>
+
+<h3>Capacitance</h3>
+
+<div class="formula">
+  C = Q / V
+</div>
+
+<h3>Parallel Plate Capacitor</h3>
+
+<div class="formula">
+  C = ε₀A / d
+</div>
+
+<h3>Energy Stored</h3>
+
+<div class="formula">
+  U = 1/2 CV²
+</div>
+
+<div class="formula">
+  U = Q² / 2C
+</div>
+
+<div class="important">
+  ⭐ Important: Potential, equipotential surfaces, capacitance,
+  combination of capacitors and energy stored.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 3 -->  <section class="chapter" id="chapter3"><h2>🔋 Chapter 3: Current Electricity</h2>
+
+<h3>Electric Current</h3>
+
+<div class="formula">
+  I = Q / t
+</div>
+
+<h3>Ohm's Law</h3>
+
+<div class="formula">
+  V = IR
+</div>
+
+<h3>Resistance</h3>
+
+<div class="formula">
+  R = ρL / A
+</div>
+
+<h3>Electrical Power</h3>
+
+<div class="formula">
+  P = VI
+</div>
+
+<div class="formula">
+  P = I²R = V²/R
+</div>
+
+<div class="important">
+  ⭐ Important: Ohm's law, resistivity, Kirchhoff's laws,
+  Wheatstone bridge and electrical power.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 4 -->  <section class="chapter" id="chapter4"><h2>🧲 Chapter 4: Moving Charges and Magnetism</h2>
+
+<h3>Magnetic Force</h3>
+
+<div class="formula">
+  F = qvB sinθ
+</div>
+
+<h3>Force on Current Carrying Wire</h3>
+
+<div class="formula">
+  F = BIL sinθ
+</div>
+
+<h3>Motion in Magnetic Field</h3>
+
+<div class="formula">
+  r = mv / qB
+</div>
+
+<div class="important">
+  ⭐ Important: Lorentz force, Biot-Savart law, Ampere's law
+  and motion of charged particles in magnetic field.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 5 -->  <section class="chapter" id="chapter5"><h2>🧲 Chapter 5: Magnetism and Matter</h2>
+
+<h3>Magnetic Dipole</h3>
+
+<div class="formula">
+  Magnetic moment = m × 2l
+</div>
+
+<h3>Important Topics</h3>
+
+<ul>
+  <li>Magnetic field</li>
+  <li>Magnetic materials</li>
+  <li>Earth's magnetism</li>
+  <li>Diamagnetic materials</li>
+  <li>Paramagnetic materials</li>
+  <li>Ferromagnetic materials</li>
+</ul>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 6 -->  <section class="chapter" id="chapter6"><h2>⚡ Chapter 6: Electromagnetic Induction</h2>
+
+<h3>Faraday's Law</h3>
+
+<div class="formula">
+  ε = −dΦ/dt
+</div>
+
+<h3>Lenz's Law</h3>
+
+<p>
+  The induced current always opposes the change in magnetic flux
+  that produces it.
+</p>
+
+<div class="important">
+  ⭐ Important: Faraday's laws, Lenz's law, motional emf and
+  self-induction.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 7 -->  <section class="chapter" id="chapter7"><h2>〰️ Chapter 7: Alternating Current</h2>
+
+<h3>AC Voltage</h3>
+
+<div class="formula">
+  V = V₀ sinωt
+</div>
+
+<h3>RMS Value</h3>
+
+<div class="formula">
+  V<sub>rms</sub> = V₀ / √2
+</div>
+
+<div class="formula">
+  I<sub>rms</sub> = I₀ / √2
+</div>
+
+<div class="important">
+  ⭐ Important: RMS value, reactance, impedance, resonance
+  and transformer.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 8 -->  <section class="chapter" id="chapter8"><h2>📡 Chapter 8: Electromagnetic Waves</h2>
+
+<p>
+  Electromagnetic waves are produced by accelerating charges
+  and consist of electric and magnetic fields oscillating
+  perpendicular to each other.
+</p>
+
+<div class="formula">
+  c = 1 / √(μ₀ε₀)
+</div>
+
+<div class="important">
+  ⭐ Important: Electromagnetic spectrum, properties of EM waves
+  and applications.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 9 -->  <section class="chapter" id="chapter9"><h2>🔭 Chapter 9: Ray Optics and Optical Instruments</h2>
+
+<h3>Mirror Formula</h3>
+
+<div class="formula">
+  1/f = 1/v + 1/u
+</div>
+
+<h3>Lens Formula</h3>
+
+<div class="formula">
+  1/f = 1/v − 1/u
+</div>
+
+<h3>Magnification</h3>
+
+<div class="formula">
+  m = v/u
+</div>
+
+<div class="important">
+  ⭐ Important: Mirror, lens, refraction, total internal reflection
+  and optical instruments.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 10 -->  <section class="chapter" id="chapter10"><h2>🌊 Chapter 10: Wave Optics</h2>
+
+<h3>Young's Double Slit Experiment</h3>
+
+<div class="formula">
+  β = λD / d
+</div>
+
+<h3>Constructive Interference</h3>
+
+<div class="formula">
+  Path difference = nλ
+</div>
+
+<div class="important">
+  ⭐ Important: Interference, YDSE, diffraction and polarization.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 11 -->  <section class="chapter" id="chapter11"><h2>💡 Chapter 11: Dual Nature of Radiation and Matter</h2>
+
+<h3>Photon Energy</h3>
+
+<div class="formula">
+  E = hν
+</div>
+
+<h3>Photoelectric Equation</h3>
+
+<div class="formula">
+  K<sub>max</sub> = hν − φ
+</div>
+
+<h3>de Broglie Wavelength</h3>
+
+<div class="formula">
+  λ = h/p
+</div>
+
+<div class="important">
+  ⭐ Important: Photoelectric effect, Einstein's equation
+  and de Broglie hypothesis.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 12 -->  <section class="chapter" id="chapter12"><h2>⚛️ Chapter 12: Atoms</h2>
+
+<h3>Bohr's Energy</h3>
+
+<div class="formula">
+  Eₙ = −13.6/n² eV
+</div>
+
+<h3>Bohr Radius</h3>
+
+<div class="formula">
+  rₙ ∝ n²
+</div>
+
+<div class="important">
+  ⭐ Important: Rutherford model, Bohr model, atomic spectra
+  and hydrogen atom.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 13 -->  <section class="chapter" id="chapter13"><h2>☢️ Chapter 13: Nuclei</h2>
+
+<h3>Mass-Energy Relation</h3>
+
+<div class="formula">
+  E = mc²
+</div>
+
+<h3>Radioactive Decay</h3>
+
+<div class="formula">
+  N = N₀e<sup>−λt</sup>
+</div>
+
+<h3>Half-Life</h3>
+
+<div class="formula">
+  T<sub>1/2</sub> = 0.693 / λ
+</div>
+
+<div class="important">
+  ⭐ Important: Nuclear force, mass defect, binding energy,
+  radioactivity and nuclear fission/fusion.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section>  <!-- CHAPTER 14 -->  <section class="chapter" id="chapter14"><h2>💻 Chapter 14: Semiconductor Electronics</h2>
+
+<h3>Important Topics</h3>
+
+<ul>
+  <li>Intrinsic and extrinsic semiconductors</li>
+  <li>p-type and n-type semiconductors</li>
+  <li>p-n junction</li>
+  <li>Diode</li>
+  <li>Rectifier</li>
+  <li>Logic gates</li>
+</ul>
+
+<div class="important">
+  ⭐ Important: Semiconductor, p-n junction diode,
+  rectifier and logic gates.
+</div>
+
+<div class="top">
+  <a href="#top">↑ Back to Chapters</a>
+</div>
+
+  </section></div><footer>
+  <p>© 2026 Student Hub | Learn • Practice • Improve</p>
+</footer></body>
 </html>

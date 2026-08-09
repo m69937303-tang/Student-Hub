@@ -1,303 +1,800 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Chemistry - Student Hub</title><meta name="description"
-content="Class 12 Chemistry notes, formulas, reactions, important topics and MCQs.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>Student Hub - Class 12 Chemistry Notes</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #172033;
-      line-height: 1.6;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    header {
-      background: linear-gradient(135deg, #059669, #0d9488);
-      color: white;
-      padding: 35px 20px;
-      text-align: center;
-    }
+body{
+  font-family:Arial,sans-serif;
+  background:#f4f7fb;
+  color:#172033;
+  line-height:1.7;
+}
 
-    header h1 {
-      font-size: 35px;
-      margin-bottom: 8px;
-    }
+header{
+  background:linear-gradient(135deg,#7b2ff7,#f107a3);
+  color:white;
+  padding:30px 15px;
+  text-align:center;
+}
 
-    header p {
-      font-size: 17px;
-    }
+header h1{
+  font-size:32px;
+  margin-bottom:8px;
+}
 
-    .container {
-      width: 92%;
-      max-width: 1100px;
-      margin: 25px auto;
-    }
+header p{
+  font-size:16px;
+}
 
-    .back {
-      display: inline-block;
-      text-decoration: none;
-      background: white;
-      color: #059669;
-      padding: 10px 16px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
 
-    .section-title {
-      text-align: center;
-      margin: 25px 0 18px;
-      font-size: 27px;
-    }
+.search{
+  width:100%;
+  padding:14px;
+  border:2px solid #ddd;
+  border-radius:12px;
+  font-size:16px;
+  margin-bottom:20px;
+}
 
-    .chapters {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-    }
+.chapter{
+  background:white;
+  margin:15px 0;
+  border-radius:14px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  overflow:hidden;
+}
 
-    .card {
-      background: white;
-      padding: 22px;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: 0.2s;
-    }
+.chapter-title{
+  padding:18px;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+  background:#fff;
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
+.chapter-title:hover{
+  background:#f5edff;
+}
 
-    .card h3 {
-      color: #059669;
-      margin-bottom: 10px;
-    }
+.notes{
+  display:none;
+  padding:20px;
+  border-top:1px solid #eee;
+}
 
-    .card p {
-      color: #555;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
+.notes h2{
+  color:#7b2ff7;
+  margin:18px 0 8px;
+}
 
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      background: #059669;
-      color: white;
-      padding: 9px 15px;
-      border-radius: 7px;
-      font-size: 14px;
-      font-weight: bold;
-    }
+.notes h3{
+  color:#333;
+  margin-top:15px;
+}
 
-    .formula-box,
-    .mcq {
-      background: white;
-      margin-top: 30px;
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
+.notes ul{
+  padding-left:22px;
+}
 
-    .formula-box h2,
-    .mcq h2 {
-      color: #059669;
-      margin-bottom: 15px;
-    }
+.formula{
+  background:#f0eaff;
+  padding:12px;
+  border-left:5px solid #7b2ff7;
+  margin:10px 0;
+  border-radius:7px;
+  font-weight:bold;
+}
 
-    .formula {
-      background: #ecfdf5;
-      padding: 12px;
-      margin: 8px 0;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+.important{
+  background:#fff4d6;
+  padding:12px;
+  border-left:5px solid #ffb000;
+  margin:12px 0;
+  border-radius:7px;
+}
 
-    .question {
-      margin-bottom: 18px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #ddd;
-    }
+.reaction{
+  background:#eafaf0;
+  padding:12px;
+  border-left:5px solid #20a464;
+  margin:10px 0;
+  border-radius:7px;
+}
 
-    footer {
-      margin-top: 40px;
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
+footer{
+  text-align:center;
+  padding:25px;
+  background:#172033;
+  color:white;
+  margin-top:30px;
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 28px;
-      }
+@media(max-width:600px){
+  header h1{
+    font-size:25px;
+  }
 
-      .section-title {
-        font-size: 23px;
-      }
-    }
-  </style></head><body>  <header>
-    <h1>🧪 Chemistry</h1>
-    <p>Class 12 Chemistry Notes, Reactions, Formulas & MCQs</p>
-  </header>  <div class="container"><a class="back" href="index.html">← Back to Student Hub</a>
+  .container{
+    padding:12px;
+  }
 
-<h2 class="section-title">📚 Chemistry Chapters</h2>
+  .notes{
+    padding:15px;
+  }
+}
+</style>
+</head>
 
-<div class="chapters">
+<body>
 
-  <div class="card">
-    <h3>Chapter 1: Solutions</h3>
-    <p>Concentration, Raoult's law, colligative properties and abnormal molar mass.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<header>
+  <h1>🧪 Student Hub</h1>
+  <p>Class 12 Chemistry - Detailed Notes</p>
+</header>
 
-  <div class="card">
-    <h3>Chapter 2: Electrochemistry</h3>
-    <p>Electrochemical cells, Nernst equation, conductance and electrolysis.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<div class="container">
 
-  <div class="card">
-    <h3>Chapter 3: Chemical Kinetics</h3>
-    <p>Rate law, order of reaction, half-life and Arrhenius equation.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<input
+  type="text"
+  id="search"
+  class="search"
+  placeholder="🔍 Search chapter..."
+  onkeyup="searchChapters()"
+>
 
-  <div class="card">
-    <h3>Chapter 4: d- and f-Block Elements</h3>
-    <p>Transition elements, oxidation states, compounds and lanthanoids.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<!-- CHAPTER 1 -->
 
-  <div class="card">
-    <h3>Chapter 5: Coordination Compounds</h3>
-    <p>Coordination number, nomenclature, isomerism and bonding theories.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<div class="chapter">
+<div class="chapter-title" onclick="toggleNotes(this)">
+1️⃣ Solutions
+</div>
 
-  <div class="card">
-    <h3>Chapter 6: Haloalkanes and Haloarenes</h3>
-    <p>Nomenclature, preparation, reactions and important mechanisms.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<div class="notes">
 
-  <div class="card">
-    <h3>Chapter 7: Alcohols, Phenols and Ethers</h3>
-    <p>Preparation, properties and important chemical reactions.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<h2>📌 Basic Concepts</h2>
 
-  <div class="card">
-    <h3>Chapter 8: Aldehydes, Ketones and Carboxylic Acids</h3>
-    <p>Carbonyl compounds, reactions, tests and important conversions.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<p>
+A solution is a homogeneous mixture of two or more components.
+The component present in larger amount is generally called the solvent
+and the component present in smaller amount is called the solute.
+</p>
 
-  <div class="card">
-    <h3>Chapter 9: Amines</h3>
-    <p>Classification, preparation, basicity and important reactions.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<h2>📌 Concentration Terms</h2>
 
-  <div class="card">
-    <h3>Chapter 10: Biomolecules</h3>
-    <p>Carbohydrates, proteins, enzymes, vitamins and nucleic acids.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<h3>Molarity</h3>
+<div class="formula">
+M = Number of moles of solute / Volume of solution in litre
+</div>
 
-  <div class="card">
-    <h3>Chapter 11: Polymers</h3>
-    <p>Addition polymers, condensation polymers and important examples.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<h3>Molality</h3>
+<div class="formula">
+m = Number of moles of solute / Mass of solvent in kg
+</div>
 
-  <div class="card">
-    <h3>Chapter 12: Chemistry in Everyday Life</h3>
-    <p>Drugs, medicines, detergents and important everyday chemicals.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<h3>Mole Fraction</h3>
+<div class="formula">
+χ = Moles of component / Total moles of all components
+</div>
+
+<h2>📌 Raoult's Law</h2>
+
+<p>
+For a solution of volatile liquids, the partial vapour pressure of each
+component is proportional to its mole fraction.
+</p>
+
+<div class="formula">
+P₁ = χ₁P₁°
+</div>
+
+<h2>📌 Relative Lowering of Vapour Pressure</h2>
+
+<div class="formula">
+(P° - P) / P° = χ₂
+</div>
+
+<h2>📌 Colligative Properties</h2>
+
+<ul>
+<li>Relative lowering of vapour pressure</li>
+<li>Elevation in boiling point</li>
+<li>Depression in freezing point</li>
+<li>Osmotic pressure</li>
+</ul>
+
+<h3>Elevation in Boiling Point</h3>
+
+<div class="formula">
+ΔTb = Kb × m
+</div>
+
+<h3>Depression in Freezing Point</h3>
+
+<div class="formula">
+ΔTf = Kf × m
+</div>
+
+<h3>Osmotic Pressure</h3>
+
+<div class="formula">
+π = CRT
+</div>
+
+<div class="important">
+⭐ Important: Colligative properties depend mainly on the number of
+solute particles, not on their chemical nature.
+</div>
+
+</div>
+</div>
+
+
+<!-- CHAPTER 2 -->
+
+<div class="chapter">
+<div class="chapter-title" onclick="toggleNotes(this)">
+2️⃣ Electrochemistry
+</div>
+
+<div class="notes">
+
+<h2>📌 Electrochemical Cell</h2>
+
+<p>
+An electrochemical cell converts chemical energy into electrical energy
+or electrical energy into chemical energy.
+</p>
+
+<h2>📌 Galvanic Cell</h2>
+
+<p>
+A galvanic cell produces electrical energy from a spontaneous redox reaction.
+</p>
+
+<ul>
+<li>Anode → Oxidation</li>
+<li>Cathode → Reduction</li>
+<li>Electrons flow from anode to cathode.</li>
+</ul>
+
+<h2>📌 Cell Potential</h2>
+
+<div class="formula">
+E°cell = E°cathode - E°anode
+</div>
+
+<h2>📌 Nernst Equation</h2>
+
+<div class="formula">
+E = E° - (0.0591/n) log Q
+</div>
+
+<h2>📌 Gibbs Energy</h2>
+
+<div class="formula">
+ΔG° = -nFE°
+</div>
+
+<h2>📌 Faraday's Law</h2>
+
+<p>
+The amount of substance deposited during electrolysis is proportional
+to the quantity of electricity passed.
+</p>
+
+<div class="formula">
+m = ZIt
+</div>
+
+<div class="important">
+⭐ Remember: Oxidation always occurs at the anode and reduction always
+occurs at the cathode.
+</div>
+
+</div>
+</div>
+
+
+<!-- CHAPTER 3 -->
+
+<div class="chapter">
+<div class="chapter-title" onclick="toggleNotes(this)">
+3️⃣ Chemical Kinetics
+</div>
+
+<div class="notes">
+
+<h2>📌 Chemical Reaction Rate</h2>
+
+<p>
+The rate of reaction represents the change in concentration of reactants
+or products per unit time.
+</p>
+
+<div class="formula">
+Rate = Change in concentration / Change in time
+</div>
+
+<h2>📌 Rate Law</h2>
+
+<div class="formula">
+Rate = k[A]ᵐ[B]ⁿ
+</div>
+
+<h2>📌 Order of Reaction</h2>
+
+<p>
+Overall order = m + n
+</p>
+
+<h2>📌 First Order Reaction</h2>
+
+<div class="formula">
+k = (2.303/t) log(a/(a-x))
+</div>
+
+<h2>📌 Half Life</h2>
+
+<div class="formula">
+t½ = 0.693/k
+</div>
+
+<h2>📌 Arrhenius Equation</h2>
+
+<div class="formula">
+k = Ae^(-Ea/RT)
+</div>
+
+<div class="important">
+⭐ Temperature increase generally increases the reaction rate because
+more molecules acquire energy equal to or greater than activation energy.
+</div>
+
+</div>
+</div>
+
+
+<!-- CHAPTER 4 -->
+
+<div class="chapter">
+<div class="chapter-title" onclick="toggleNotes(this)">
+4️⃣ d- and f-Block Elements
+</div>
+
+<div class="notes">
+
+<h2>📌 Transition Elements</h2>
+
+<p>
+Elements in which the differentiating electron enters the d-orbital
+of the penultimate shell are called transition elements.
+</p>
+
+<h2>📌 Important Properties</h2>
+
+<ul>
+<li>Variable oxidation states</li>
+<li>Formation of coloured ions</li>
+<li>Complex formation</li>
+<li>Catalytic activity</li>
+<li>Magnetic behaviour</li>
+</ul>
+
+<h2>📌 Why are transition metal compounds coloured?</h2>
+
+<p>
+Many transition metal ions contain partially filled d-orbitals.
+Electronic transitions between these orbitals can absorb visible light,
+producing colour.
+</p>
+
+<h2>📌 Lanthanides</h2>
+
+<p>
+Lanthanides involve filling of the 4f orbitals.
+</p>
+
+<h2>📌 Actinides</h2>
+
+<p>
+Actinides involve filling of the 5f orbitals and many of them are radioactive.
+</p>
+
+<div class="important">
+⭐ Important: Variable oxidation states are common because the energies
+of ns and (n-1)d orbitals are relatively close.
+</div>
+
+</div>
+</div>
+
+
+<!-- CHAPTER 5 -->
+
+<div class="chapter">
+<div class="chapter-title" onclick="toggleNotes(this)">
+5️⃣ Coordination Compounds
+</div>
+
+<div class="notes">
+
+<h2>📌 Coordination Compound</h2>
+
+<p>
+A coordination compound contains a central metal atom or ion surrounded
+by ions or molecules called ligands.
+</p>
+
+<h2>📌 Ligand</h2>
+
+<p>
+A ligand is an ion or molecule capable of donating an electron pair
+to the central metal ion.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+<li>NH₃ → Ammine ligand</li>
+<li>H₂O → Aqua ligand</li>
+<li>Cl⁻ → Chlorido ligand</li>
+<li>CN⁻ → Cyanido ligand</li>
+</ul>
+
+<h2>📌 Coordination Number</h2>
+
+<p>
+The number of donor atoms directly attached to the central metal ion
+is called coordination number.
+</p>
+
+<h2>📌 Important Terms</h2>
+
+<ul>
+<li>Central metal atom/ion</li>
+<li>Ligand</li>
+<li>Coordination sphere</li>
+<li>Coordination number</li>
+<li>Oxidation state</li>
+</ul>
+
+<div class="important">
+⭐ Coordination compounds are important in biological systems,
+metallurgy, medicines and analytical chemistry.
+</div>
+
+</div>
+</div>
+
+
+<!-- CHAPTER 6 -->
+
+<div class="chapter">
+<div class="chapter-title" onclick="toggleNotes(this)">
+6️⃣ Haloalkanes and Haloarenes
+</div>
+
+<div class="notes">
+
+<h2>📌 Definition</h2>
+
+<p>
+Haloalkanes are compounds in which a halogen atom is attached to an
+alkyl group. Haloarenes contain a halogen attached directly to an aromatic ring.
+</p>
+
+<h2>📌 Important Halogens</h2>
+
+<ul>
+<li>F → Fluorine</li>
+<li>Cl → Chlorine</li>
+<li>Br → Bromine</li>
+<li>I → Iodine</li>
+</ul>
+
+<h2>📌 Nucleophilic Substitution</h2>
+
+<p>
+A nucleophile replaces the halogen atom in a haloalkane.
+</p>
+
+<div class="reaction">
+R-X + OH⁻ → R-OH + X⁻
+</div>
+
+<h2>📌 SN1 Reaction</h2>
+
+<ul>
+<li>Two-step mechanism</li>
+<li>Carbocation intermediate formed</li>
+<li>Favoured by tertiary haloalkanes</li>
+</ul>
+
+<h2>📌 SN2 Reaction</h2>
+
+<ul>
+<li>One-step reaction</li>
+<li>Backside attack</li>
+<li>Favoured by primary haloalkanes</li>
+</ul>
+
+<div class="important">
+⭐ SN1 → Carbocation formation  
+⭐ SN2 → Backside attack
+</div>
+
+</div>
+</div>
+
+
+<!-- CHAPTER 7 -->
+
+<div class="chapter">
+<div class="chapter-title" onclick="toggleNotes(this)">
+7️⃣ Alcohols, Phenols and Ethers
+</div>
+
+<div class="notes">
+
+<h2>📌 Alcohols</h2>
+
+<p>
+Alcohols contain the hydroxyl group (-OH) attached to a saturated carbon atom.
+</p>
+
+<h2>📌 Phenols</h2>
+
+<p>
+Phenols contain an -OH group directly attached to an aromatic ring.
+</p>
+
+<h2>📌 Ethers</h2>
+
+<p>
+Ethers contain an oxygen atom between two alkyl or aryl groups.
+</p>
+
+<div class="reaction">
+R-OH + Na → R-ONa + ½H₂
+</div>
+
+<h2>📌 Oxidation of Alcohols</h2>
+
+<p>
+Primary alcohols can be oxidised to aldehydes and further to carboxylic acids.
+Secondary alcohols generally form ketones on oxidation.
+</p>
+
+<div class="important">
+⭐ Phenol is more acidic than alcohol because the phenoxide ion is
+stabilised by resonance.
+</div>
+
+</div>
+</div>
+
+
+<!-- CHAPTER 8 -->
+
+<div class="chapter">
+<div class="chapter-title" onclick="toggleNotes(this)">
+8️⃣ Aldehydes, Ketones and Carboxylic Acids
+</div>
+
+<div class="notes">
+
+<h2>📌 Aldehydes</h2>
+
+<p>
+Aldehydes contain the -CHO functional group.
+</p>
+
+<h2>📌 Ketones</h2>
+
+<p>
+Ketones contain the carbonyl group between two carbon groups.
+</p>
+
+<h2>📌 Carboxylic Acids</h2>
+
+<p>
+Carboxylic acids contain the -COOH functional group.
+</p>
+
+<h2>📌 Important Reactions</h2>
+
+<div class="reaction">
+Aldehyde + [O] → Carboxylic acid
+</div>
+
+<div class="reaction">
+Ketone + [H] → Secondary alcohol
+</div>
+
+<h2>📌 Tollens' Test</h2>
+
+<p>
+Aldehydes can reduce Tollens' reagent and give a silver deposit.
+</p>
+
+<h2>📌 Fehling's Test</h2>
+
+<p>
+Many aliphatic aldehydes give a characteristic positive Fehling's test.
+</p>
+
+<div class="important">
+⭐ Aldehydes are generally more reactive towards nucleophilic addition
+than ketones because of steric and electronic effects.
+</div>
+
+</div>
+</div>
+
+
+<!-- CHAPTER 9 -->
+
+<div class="chapter">
+<div class="chapter-title" onclick="toggleNotes(this)">
+9️⃣ Amines
+</div>
+
+<div class="notes">
+
+<h2>📌 Amines</h2>
+
+<p>
+Amines are derivatives of ammonia in which one or more hydrogen atoms
+are replaced by alkyl or aryl groups.
+</p>
+
+<h2>📌 Classification</h2>
+
+<ul>
+<li>Primary amine → RNH₂</li>
+<li>Secondary amine → R₂NH</li>
+<li>Tertiary amine → R₃N</li>
+</ul>
+
+<h2>📌 Basic Nature</h2>
+
+<p>
+Amines show basic character because nitrogen contains a lone pair of electrons.
+</p>
+
+<h2>📌 Important Reaction</h2>
+
+<div class="reaction">
+R-NH₂ + HCl → R-NH₃⁺Cl⁻
+</div>
+
+<div class="important">
+⭐ Aliphatic amines are generally more basic than ammonia, though the
+actual basicity depends on solvent and structure.
+</div>
+
+</div>
+</div>
+
+
+<!-- CHAPTER 10 -->
+
+<div class="chapter">
+<div class="chapter-title" onclick="toggleNotes(this)">
+🔟 Biomolecules
+</div>
+
+<div class="notes">
+
+<h2>📌 Carbohydrates</h2>
+
+<p>
+Carbohydrates are polyhydroxy aldehydes or ketones, or compounds that
+produce them on hydrolysis.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+<li>Glucose</li>
+<li>Fructose</li>
+<li>Sucrose</li>
+<li>Starch</li>
+<li>Cellulose</li>
+</ul>
+
+<h2>📌 Proteins</h2>
+
+<p>
+Proteins are polymers of amino acids joined by peptide bonds.
+</p>
+
+<h2>📌 Amino Acids</h2>
+
+<p>
+Amino acids contain both amino (-NH₂) and carboxyl (-COOH) groups.
+</p>
+
+<h2>📌 Nucleic Acids</h2>
+
+<p>
+DNA and RNA are nucleic acids involved in storage and transmission of
+genetic information.
+</p>
+
+<div class="important">
+⭐ Protein → amino acid units  
+⭐ DNA/RNA → nucleotide units
+</div>
+
+</div>
+</div>
 
 </div>
 
-<div class="formula-box">
+<footer>
+  <p>© 2026 Student Hub | Class 12 Chemistry</p>
+</footer>
 
-  <h2>🧮 Important Chemistry Formulas</h2>
 
-  <div class="formula">
-    Molarity: M = moles of solute / volume of solution in litres
-  </div>
+<script>
 
-  <div class="formula">
-    Molality: m = moles of solute / mass of solvent in kg
-  </div>
+function toggleNotes(element){
 
-  <div class="formula">
-    Mole Fraction: Xₐ = nₐ / (nₐ + nᵦ)
-  </div>
+  let notes = element.nextElementSibling;
 
-  <div class="formula">
-    Nernst Equation: E = E° − (0.0591/n) log Q
-  </div>
+  if(notes.style.display === "block"){
+    notes.style.display = "none";
+  }
+  else{
+    notes.style.display = "block";
+  }
 
-  <div class="formula">
-    First Order Rate Constant: k = (2.303/t) log(a/(a−x))
-  </div>
+}
 
-  <div class="formula">
-    pH = −log[H⁺]
-  </div>
 
-  <div class="formula">
-    ΔG° = −RT ln K
-  </div>
+function searchChapters(){
 
-</div>
+  let input =
+    document.getElementById("search").value.toLowerCase();
 
-<div class="mcq">
+  let chapters =
+    document.querySelectorAll(".chapter");
 
-  <h2>📝 Quick MCQs</h2>
+  chapters.forEach(function(chapter){
 
-  <div class="question">
-    <b>1. The SI unit of molarity is:</b><br>
-    A) mol kg⁻¹<br>
-    B) mol L⁻¹<br>
-    C) kg mol⁻¹<br>
-    D) L mol⁻¹
-    <br><br>
-    <b>Answer: B) mol L⁻¹</b>
-  </div>
+    let text =
+      chapter.innerText.toLowerCase();
 
-  <div class="question">
-    <b>2. The pH of a neutral solution at 25°C is:</b><br>
-    A) 0<br>
-    B) 5<br>
-    C) 7<br>
-    D) 14
-    <br><br>
-    <b>Answer: C) 7</b>
-  </div>
+    if(text.includes(input)){
+      chapter.style.display = "block";
+    }
+    else{
+      chapter.style.display = "none";
+    }
 
-  <div class="question">
-    <b>3. Which element is a transition element?</b><br>
-    A) Na<br>
-    B) Mg<br>
-    C) Fe<br>
-    D) Cl
-    <br><br>
-    <b>Answer: C) Fe</b>
-  </div>
+  });
 
-</div>
+}
 
-  </div>  <footer>
-    <p>© 2026 Student Hub | Learn • Practice • Improve</p>
-  </footer></body>
+</script>
+
+</body>
 </html>
+
+    

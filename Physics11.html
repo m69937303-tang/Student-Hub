@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Student Hub | Class 11 Physics</title>
+
+<meta name="description"
+content="Class 11 Physics detailed notes, formulas, concepts and important questions.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f8fc;
+    color:#17202a;
+    line-height:1.75;
+}
+
+header{
+    background:linear-gradient(135deg,#0d47a1,#1976d2,#00a6a6);
+    color:white;
+    text-align:center;
+    padding:42px 15px;
+}
+
+header h1{
+    font-size:36px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px 15px;
+}
+
+.search{
+    width:100%;
+    padding:15px;
+    border:2px solid #d7e2ed;
+    border-radius:12px;
+    font-size:16px;
+    margin-bottom:20px;
+    outline:none;
+}
+
+.search:focus{
+    border-color:#1976d2;
+}
+
+.chapter{
+    background:white;
+    border-radius:16px;
+    margin-bottom:18px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.chapter-title{
+    padding:20px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    background:white;
+}
+
+.chapter-title:hover{
+    background:#eef6ff;
+}
+
+.notes{
+    display:none;
+    padding:23px;
+    border-top:1px solid #e5e5e5;
+}
+
+.notes h2{
+    color:#0759a5;
+    margin-top:24px;
+    margin-bottom:8px;
+}
+
+.notes h3{
+    color:#34495e;
+    margin-top:18px;
+    margin-bottom:6px;
+}
+
+.notes ul,
+.notes ol{
+    margin-left:25px;
+}
+
+.concept{
+    background:#eef7ff;
+    border-left:5px solid #1976d2;
+    padding:15px;
+    margin:14px 0;
+    border-radius:8px;
+}
+
+.formula{
+    background:#fff8df;
+    border-left:5px solid #e0a800;
+    padding:15px;
+    margin:14px 0;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.important{
+    background:#fff0f0;
+    border-left:5px solid #dc3545;
+    padding:15px;
+    margin:14px 0;
+    border-radius:8px;
+}
+
+.question{
+    background:#f4efff;
+    border-left:5px solid #7b3fc6;
+    padding:13px;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #d8e1e8;
+    padding:10px;
+}
+
+th{
+    background:#eaf4ff;
+}
+
+footer{
+    background:#17202a;
+    color:white;
+    text-align:center;
+    padding:28px;
+    margin-top:30px;
+}
+
+@media(max-width:650px){
+
+    header h1{
+        font-size:28px;
+    }
+
+    .notes{
+        padding:16px;
+    }
+
+    .chapter-title{
+        font-size:18px;
+    }
+
+    table{
+        font-size:13px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>⚡ Student Hub</h1>
+
+<p>
+Class 11 Physics — Detailed Notes
+</p>
+
+<p>
+Concepts • Formulas • Important Questions • Revision
+</p>
+
+</header>
+
+
+<div class="container">
+
+
+<input
+class="search"
+id="search"
+type="text"
+placeholder="🔍 Search Physics topic..."
+onkeyup="searchNotes()"
+>
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 1 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+1️⃣ Units and Measurements
+</div>
+
+<div class="notes">
+
+<h2>1. Physical Quantity</h2>
+
+<p>
+A physical quantity is a quantity that can be measured
+and expressed using a numerical value and a unit.
+</p>
+
+<h2>2. SI System</h2>
+
+<p>
+The International System of Units is the standard system
+used for scientific measurements.
+</p>
+
+<table>
+
+<tr>
+<th>Quantity</th>
+<th>SI Unit</th>
+<th>Symbol</th>
+</tr>
+
+<tr>
+<td>Length</td>
+<td>metre</td>
+<td>m</td>
+</tr>
+
+<tr>
+<td>Mass</td>
+<td>kilogram</td>
+<td>kg</td>
+</tr>
+
+<tr>
+<td>Time</td>
+<td>second</td>
+<td>s</td>
+</tr>
+
+<tr>
+<td>Temperature</td>
+<td>kelvin</td>
+<td>K</td>
+</tr>
+
+<tr>
+<td>Electric current</td>
+<td>ampere</td>
+<td>A</td>
+</tr>
+
+<tr>
+<td>Amount of substance</td>
+<td>mole</td>
+<td>mol</td>
+</tr>
+
+<tr>
+<td>Luminous intensity</td>
+<td>candela</td>
+<td>cd</td>
+</tr>
+
+</table>
+
+<h2>3. Dimensions</h2>
+
+<p>
+Dimensions express a physical quantity in terms of
+fundamental quantities such as mass, length and time.
+</p>
+
+<div class="formula">
+
+Velocity = [LT⁻¹]
+
+<br><br>
+
+Acceleration = [LT⁻²]
+
+<br><br>
+
+Force = [MLT⁻²]
+
+<br><br>
+
+Work = [ML²T⁻²]
+
+<br><br>
+
+Power = [ML²T⁻³]
+
+</div>
+
+<h2>4. Significant Figures</h2>
+
+<p>
+Significant figures indicate the meaningful digits in
+a measured quantity.
+</p>
+
+<ul>
+<li>All non-zero digits are significant.</li>
+<li>Zeros between non-zero digits are significant.</li>
+<li>Leading zeros are generally not significant.</li>
+</ul>
+
+<h2>5. Errors</h2>
+
+<p>
+Measurements may contain errors due to limitations of
+instruments or experimental conditions.
+</p>
+
+<div class="formula">
+
+Absolute error = |Measured value − True value|
+
+</div>
+
+<div class="important">
+
+⭐ Dimensional analysis can be used to check the
+dimensional consistency of an equation.
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. What are fundamental and derived quantities?
+</div>
+
+<div class="question">
+2. Explain dimensional analysis.
+</div>
+
+<div class="question">
+3. What are significant figures?
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 2 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+2️⃣ Motion in a Straight Line
+</div>
+
+<div class="notes">
+
+<h2>1. Motion</h2>
+
+<p>
+An object is said to be in motion if its position changes
+with respect to a reference point with time.
+</p>
+
+<h2>2. Distance</h2>
+
+<p>
+Distance is the total path length travelled by an object.
+It is a scalar quantity.
+</p>
+
+<h2>3. Displacement</h2>
+
+<p>
+Displacement is the shortest directed distance between
+initial and final positions.
+</p>
+
+<div class="important">
+
+Distance is scalar.
+
+<br>
+
+Displacement is vector.
+
+</div>
+
+<h2>4. Speed</h2>
+
+<div class="formula">
+
+Speed = Distance / Time
+
+</div>
+
+<h2>5. Velocity</h2>
+
+<div class="formula">
+
+Velocity = Displacement / Time
+
+</div>
+
+<h2>6. Acceleration</h2>
+
+<div class="formula">
+
+a = (v − u) / t
+
+</div>
+
+<h2>7. Equations of Motion</h2>
+
+<div class="formula">
+
+v = u + at
+
+<br><br>
+
+s = ut + ½at²
+
+<br><br>
+
+v² = u² + 2as
+
+<br><br>
+
+s = ((u + v)/2)t
+
+</div>
+
+<p>
+Here u is initial velocity, v is final velocity,
+a is acceleration, t is time and s is displacement.
+</p>
+
+<h2>8. Free Fall</h2>
+
+<p>
+When an object falls under the influence of gravity alone,
+its acceleration is approximately g near Earth's surface.
+</p>
+
+<div class="formula">
+
+g ≈ 9.8 m/s²
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. Differentiate distance and displacement.
+</div>
+
+<div class="question">
+2. Derive the three equations of motion.
+</div>
+
+<div class="question">
+3. Explain velocity-time graph.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 3 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+3️⃣ Motion in a Plane
+</div>
+
+<div class="notes">
+
+<h2>1. Scalars and Vectors</h2>
+
+<p>
+A scalar has magnitude only, whereas a vector has both
+magnitude and direction.
+</p>
+
+<table>
+
+<tr>
+<th>Scalar</th>
+<th>Vector</th>
+</tr>
+
+<tr>
+<td>Mass</td>
+<td>Displacement</td>
+</tr>
+
+<tr>
+<td>Time</td>
+<td>Velocity</td>
+</tr>
+
+<tr>
+<td>Speed</td>
+<td>Acceleration</td>
+</tr>
+
+</table>
+
+<h2>2. Vector Addition</h2>
+
+<p>
+Vectors can be added using the triangle law or
+parallelogram law.
+</p>
+
+<h2>3. Components of Vector</h2>
+
+<div class="formula">
+
+Aₓ = A cosθ
+
+<br><br>
+
+Aᵧ = A sinθ
+
+</div>
+
+<h2>4. Projectile Motion</h2>
+
+<p>
+A projectile is an object projected into air that moves
+under gravity while neglecting air resistance.
+</p>
+
+<div class="formula">
+
+Time of flight:
+
+T = 2u sinθ / g
+
+<br><br>
+
+Maximum height:
+
+H = u²sin²θ / 2g
+
+<br><br>
+
+Range:
+
+R = u²sin2θ / g
+
+</div>
+
+<h2>5. Uniform Circular Motion</h2>
+
+<p>
+In uniform circular motion, speed remains constant but
+velocity changes continuously because its direction changes.
+</p>
+
+<div class="formula">
+
+Centripetal acceleration:
+
+a = v²/r
+
+</div>
+
+<div class="important">
+
+⭐ In circular motion, acceleration is directed towards
+the centre of the circle.
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. Explain projectile motion.
+</div>
+
+<div class="question">
+2. Derive the expression for maximum height.
+</div>
+
+<div class="question">
+3. Explain centripetal acceleration.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 4 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+4️⃣ Laws of Motion
+</div>
+
+<div class="notes">
+
+<h2>1. Force</h2>
+
+<p>
+Force is an interaction that can change the state of motion
+or shape of an object.
+</p>
+
+<h2>2. Newton's First Law</h2>
+
+<p>
+An object remains at rest or in uniform straight-line motion
+unless acted upon by an external unbalanced force.
+</p>
+
+<h2>3. Newton's Second Law</h2>
+
+<div class="formula">
+
+F = ma
+
+</div>
+
+<p>
+More generally, force is related to the rate of change
+of momentum.
+</p>
+
+<h2>4. Newton's Third Law</h2>
+
+<p>
+For every action, there is an equal and opposite reaction.
+</p>
+
+<h2>5. Momentum</h2>
+
+<div class="formula">
+
+p = mv
+
+</div>
+
+<h2>6. Impulse</h2>
+
+<div class="formula">
+
+Impulse = Force × Time
+
+J = FΔt
+
+</div>
+
+<h2>7. Friction</h2>
+
+<p>
+Friction opposes relative motion or the tendency of
+relative motion between surfaces.
+</p>
+
+<div class="formula">
+
+Limiting friction:
+
+f = μN
+
+</div>
+
+<h2>8. Circular Motion</h2>
+
+<div class="formula">
+
+Centripetal force:
+
+F = mv²/r
+
+</div>
+
+<div class="important">
+
+⭐ Action and reaction forces act on different objects.
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. State and explain Newton's three laws.
+</div>
+
+<div class="question">
+2. Define momentum and impulse.
+</div>
+
+<div class="question">
+3. Explain friction.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 5 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+5️⃣ Work, Energy and Power
+</div>
+
+<div class="notes">
+
+<h2>1. Work</h2>
+
+<p>
+Work is done when a force causes displacement of an object
+in the direction having a component along the force.
+</p>
+
+<div class="formula">
+
+W = Fs cosθ
+
+</div>
+
+<h2>2. Kinetic Energy</h2>
+
+<div class="formula">
+
+K = ½mv²
+
+</div>
+
+<h2>3. Potential Energy</h2>
+
+<p>
+Gravitational potential energy near Earth's surface is:
+</p>
+
+<div class="formula">
+
+U = mgh
+
+</div>
+
+<h2>4. Work-Energy Theorem</h2>
+
+<p>
+The net work done on an object equals the change in
+its kinetic energy.
+</p>
+
+<div class="formula">
+
+Wnet = ΔK
+
+</div>
+
+<h2>5. Power</h2>
+
+<div class="formula">
+
+Power = Work / Time
+
+<br><br>
+
+P = W/t
+
+</div>
+
+<h2>6. Mechanical Energy</h2>
+
+<div class="formula">
+
+Mechanical Energy = Kinetic Energy + Potential Energy
+
+</div>
+
+<h2>7. Conservation of Energy</h2>
+
+<p>
+Energy can neither be created nor destroyed; it can only
+change from one form to another.
+</p>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. Derive kinetic energy.
+</div>
+
+<div class="question">
+2. Explain work-energy theorem.
+</div>
+
+<div class="question">
+3. Explain conservation of mechanical energy.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 6 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+6️⃣ System of Particles and Rotational Motion
+</div>
+
+<div class="notes">
+
+<h2>1. Centre of Mass</h2>
+
+<p>
+The centre of mass is the point at which the entire mass
+of a system may be considered concentrated for describing
+translational motion.
+</p>
+
+<div class="formula">
+
+For two particles:
+
+xcm = (m₁x₁ + m₂x₂)/(m₁ + m₂)
+
+</div>
+
+<h2>2. Torque</h2>
+
+<div class="formula">
+
+τ = r × F
+
+<br><br>
+
+Magnitude:
+
+τ = rF sinθ
+
+</div>
+
+<h2>3. Angular Velocity</h2>
+
+<div class="formula">
+
+ω = Δθ/Δt
+
+</div>
+
+<h2>4. Angular Acceleration</h2>
+
+<div class="formula">
+
+α = Δω/Δt
+
+</div>
+
+<h2>5. Moment of Inertia</h2>
+
+<p>
+Moment of inertia measures resistance of a body to change
+in its rotational motion.
+</p>
+
+<div class="formula">
+
+I = Σmr²
+
+</div>
+
+<h2>6. Angular Momentum</h2>
+
+<div class="formula">
+
+L = Iω
+
+</div>
+
+<h2>7. Rotational Kinetic Energy</h2>
+
+<div class="formula">
+
+K = ½Iω²
+
+</div>
+
+<h2>8. Rolling Motion</h2>
+
+<p>
+For pure rolling without slipping:
+</p>
+
+<div class="formula">
+
+v = Rω
+
+</div>
+
+<div class="important">
+
+⭐ Torque plays a role in rotational motion similar to
+the role of force in translational motion.
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. Define centre of mass.
+</div>
+
+<div class="question">
+2. Define torque and moment of inertia.
+</div>
+
+<div class="question">
+3. Explain angular momentum.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 7 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+7️⃣ Gravitation
+</div>
+
+<div class="notes">
+
+<h2>1. Universal Law of Gravitation</h2>
+
+<p>
+Every two masses attract each other with a force proportional
+to the product of their masses and inversely proportional
+to the square of the distance between their centres.
+</p>
+
+<div class="formula">
+
+F = Gm₁m₂/r²
+
+</div>
+
+<h2>2. Acceleration Due to Gravity</h2>
+
+<div class="formula">
+
+g = GM/R²
+
+</div>
+
+<h2>3. Gravitational Potential</h2>
+
+<div class="formula">
+
+V = −GM/r
+
+</div>
+
+<h2>4. Gravitational Potential Energy</h2>
+
+<div class="formula">
+
+U = −GMm/r
+
+</div>
+
+<h2>5. Escape Velocity</h2>
+
+<p>
+Escape velocity is the minimum speed required for an object
+to escape the gravitational influence of a celestial body
+without further propulsion.
+</p>
+
+<div class="formula">
+
+ve = √(2GM/R)
+
+</div>
+
+<h2>6. Orbital Velocity</h2>
+
+<div class="formula">
+
+vo = √(GM/r)
+
+</div>
+
+<h2>7. Satellites</h2>
+
+<p>
+Artificial satellites can be placed in orbit around Earth
+for communication, navigation, weather observation and
+scientific research.
+</p>
+
+<div class="important">
+
+⭐ Escape velocity from Earth is independent of the mass
+of the escaping object when air resistance is neglected.
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. State Newton's law of gravitation.
+</div>
+
+<div class="question">
+2. Derive escape velocity.
+</div>
+
+<div class="question">
+3. Differentiate orbital velocity and escape velocity.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 8 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+8️⃣ Mechanical Properties of Solids
+</div>
+
+<div class="notes">
+
+<h2>1. Elasticity</h2>
+
+<p>
+Elasticity is the property by which a body tends to regain
+its original shape and size after removal of deforming force,
+within its elastic limit.
+</p>
+
+<h2>2. Stress</h2>
+
+<div class="formula">
+
+Stress = Force / Area
+
+</div>
+
+<h2>3. Strain</h2>
+
+<div class="formula">
+
+Strain = Change in dimension / Original dimension
+
+</div>
+
+<p>
+Strain is dimensionless.
+</p>
+
+<h2>4. Hooke's Law</h2>
+
+<div class="formula">
+
+Stress ∝ Strain
+
+</div>
+
+<h2>5. Young's Modulus</h2>
+
+<div class="formula">
+
+Y = Longitudinal stress / Longitudinal strain
+
+</div>
+
+<h2>6. Bulk Modulus</h2>
+
+<p>
+Bulk modulus describes resistance to change in volume.
+</p>
+
+<h2>7. Shear Modulus</h2>
+
+<p>
+Shear modulus describes resistance to change in shape
+under tangential stress.
+</p>
+
+<div class="important">
+
+⭐ Stress has dimensions of pressure.
+
+<br>
+
+⭐ Strain has no dimensions.
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. State Hooke's law.
+</div>
+
+<div class="question">
+2. Define stress and strain.
+</div>
+
+<div class="question">
+3. Explain Young's modulus.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 9 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+9️⃣ Mechanical Properties of Fluids
+</div>
+
+<div class="notes">
+
+<h2>1. Pressure</h2>
+
+<div class="formula">
+
+P = F/A
+
+</div>
+
+<h2>2. Pascal's Law</h2>
+
+<p>
+Pressure applied to an enclosed fluid is transmitted
+undiminished in all directions.
+</p>
+
+<h2>3. Archimedes' Principle</h2>
+
+<p>
+An object immersed in a fluid experiences an upward buoyant
+force equal to the weight of the fluid displaced by it.
+</p>
+
+<h2>4. Equation of Continuity</h2>
+
+<div class="formula">
+
+A₁v₁ = A₂v₂
+
+</div>
+
+<h2>5. Bernoulli's Principle</h2>
+
+<div class="formula">
+
+P + ½ρv² + ρgh = constant
+
+</div>
+
+<h2>6. Viscosity</h2>
+
+<p>
+Viscosity is the internal resistance offered by a fluid
+to relative motion between its layers.
+</p>
+
+<h2>7. Surface Tension</h2>
+
+<p>
+Surface tension arises from cohesive forces between molecules
+at a liquid surface.
+</p>
+
+<h2>8. Stokes' Law</h2>
+
+<div class="formula">
+
+F = 6πηrv
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. Explain Pascal's law.
+</div>
+
+<div class="question">
+2. Explain Archimedes' principle.
+</div>
+
+<div class="question">
+3. Derive Bernoulli's equation.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 10 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+🔟 Thermal Properties of Matter
+</div>
+
+<div class="notes">
+
+<h2>1. Temperature</h2>
+
+<p>
+Temperature indicates the degree of hotness or coldness
+of a body and is related to the average kinetic energy
+of its particles.
+</p>
+
+<h2>2. Celsius and Kelvin</h2>
+
+<div class="formula">
+
+K = °C + 273.15
+
+</div>
+
+<h2>3. Thermal Expansion</h2>
+
+<p>
+Most substances expand when heated, though the amount
+depends on the material and conditions.
+</p>
+
+<div class="formula">
+
+Linear expansion:
+
+ΔL = αLΔT
+
+</div>
+
+<h2>4. Heat</h2>
+
+<div class="formula">
+
+Q = mcΔT
+
+</div>
+
+<h2>5. Specific Heat Capacity</h2>
+
+<p>
+Specific heat capacity is the heat required to raise the
+temperature of unit mass of a substance by one degree.
+</p>
+
+<h2>6. Latent Heat</h2>
+
+<div class="formula">
+
+Q = mL
+
+</div>
+
+<h2>7. Heat Transfer</h2>
+
+<ul>
+<li>Conduction</li>
+<li>Convection</li>
+<li>Radiation</li>
+</ul>
+
+<h2>8. Newton's Law of Cooling</h2>
+
+<p>
+Under suitable conditions, the rate of cooling is related
+to the temperature difference between the body and surroundings.
+</p>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. Define specific heat capacity.
+</div>
+
+<div class="question">
+2. Explain thermal expansion.
+</div>
+
+<div class="question">
+3. Differentiate conduction, convection and radiation.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 11 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+1️⃣1️⃣ Thermodynamics
+</div>
+
+<div class="notes">
+
+<h2>1. System and Surroundings</h2>
+
+<p>
+The part of the universe chosen for thermodynamic study
+is called the system. Everything outside it is the surroundings.
+</p>
+
+<h2>2. Internal Energy</h2>
+
+<p>
+Internal energy is the total microscopic energy associated
+with the particles of a system.
+</p>
+
+<h2>3. Zeroth Law</h2>
+
+<p>
+If two systems are separately in thermal equilibrium with
+a third system, they are in thermal equilibrium with each other.
+</p>
+
+<h2>4. First Law of Thermodynamics</h2>
+
+<div class="formula">
+
+ΔQ = ΔU + ΔW
+
+</div>
+
+<p>
+Heat supplied to a system is used to change internal energy
+and/or perform work.
+</p>
+
+<h2>5. Isothermal Process</h2>
+
+<p>
+Temperature remains constant.
+</p>
+
+<div class="formula">
+
+For ideal gas:
+
+PV = constant
+
+</div>
+
+<h2>6. Adiabatic Process</h2>
+
+<p>
+No heat is exchanged with the surroundings.
+</p>
+
+<div class="formula">
+
+PVᵞ = constant
+
+</div>
+
+<h2>7. Second Law</h2>
+
+<p>
+The second law introduces the direction of natural processes
+and the concept of entropy.
+</p>
+
+<div class="important">
+
+⭐ Isothermal → Temperature constant.
+
+<br>
+
+⭐ Adiabatic → Heat exchange zero.
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. State the first law of thermodynamics.
+</div>
+
+<div class="question">
+2. Differentiate isothermal and adiabatic processes.
+</div>
+
+<div class="question">
+3. Explain the second law of thermodynamics.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 12 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+1️⃣2️⃣ Kinetic Theory
+</div>
+
+<div class="notes">
+
+<h2>1. Kinetic Theory</h2>
+
+<p>
+Kinetic theory explains macroscopic properties of gases
+using the motion of their microscopic particles.
+</p>
+
+<h2>2. Ideal Gas</h2>
+
+<div class="formula">
+
+PV = nRT
+
+</div>
+
+<h2>3. Pressure</h2>
+
+<p>
+Gas pressure arises from collisions of molecules with
+the walls of the container.
+</p>
+
+<h2>4. Kinetic Energy</h2>
+
+<div class="formula">
+
+Average translational kinetic energy
+∝ Temperature
+
+</div>
+
+<h2>5. Temperature</h2>
+
+<p>
+Absolute temperature is directly related to the average
+translational kinetic energy of ideal-gas molecules.
+</p>
+
+<div class="important">
+
+⭐ At the same temperature, ideal-gas molecules of different
+gases have the same average translational kinetic energy.
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. Explain kinetic theory of gases.
+</div>
+
+<div class="question">
+2. Derive the pressure relation from kinetic theory.
+</div>
+
+<div class="question">
+3. State ideal gas equation.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 13 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+1️⃣3️⃣ Oscillations
+</div>
+
+<div class="notes">
+
+<h2>1. Periodic Motion</h2>
+
+<p>
+A motion that repeats itself after equal intervals of time
+is called periodic motion.
+</p>
+
+<h2>2. Simple Harmonic Motion</h2>
+
+<p>
+In SHM, restoring acceleration is directly proportional to
+displacement and directed towards the mean position.
+</p>
+
+<div class="formula">
+
+a = −ω²x
+
+</div>
+
+<h2>3. Displacement</h2>
+
+<div class="formula">
+
+x = A sin(ωt + φ)
+
+</div>
+
+<h2>4. Time Period</h2>
+
+<div class="formula">
+
+T = 2π/ω
+
+</div>
+
+<h2>5. Frequency</h2>
+
+<div class="formula">
+
+f = 1/T
+
+</div>
+
+<h2>6. Simple Pendulum</h2>
+
+<p>
+For small oscillations, the time period of a simple pendulum
+is approximately:
+</p>
+
+<div class="formula">
+
+T = 2π√(L/g)
+
+</div>
+
+<h2>7. Energy in SHM</h2>
+
+<p>
+The total mechanical energy remains constant in ideal SHM,
+while kinetic and potential energies interchange continuously.
+</p>
+
+<div class="important">
+
+⭐ At mean position: kinetic energy is maximum.
+
+<br>
+
+⭐ At extreme position: potential energy is maximum.
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. Define SHM.
+</div>
+
+<div class="question">
+2. Derive time period of simple pendulum.
+</div>
+
+<div class="question">
+3. Explain energy changes in SHM.
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 14 -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+1️⃣4️⃣ Waves
+</div>
+
+<div class="notes">
+
+<h2>1. Wave</h2>
+
+<p>
+A wave is a disturbance that transfers energy from one
+place to another without requiring bulk transport of matter.
+</p>
+
+<h2>2. Types of Waves</h2>
+
+<ul>
+<li>Transverse waves</li>
+<li>Longitudinal waves</li>
+</ul>
+
+<h2>3. Wavelength</h2>
+
+<p>
+The distance between two successive points in the same phase
+is called wavelength.
+</p>
+
+<div class="formula">
+
+λ = wavelength
+
+</div>
+
+<h2>4. Frequency</h2>
+
+<div class="formula">
+
+f = 1/T
+
+</div>
+
+<h2>5. Wave Speed</h2>
+
+<div class="formula">
+
+v = fλ
+
+</div>
+
+<h2>6. Sound Waves</h2>
+
+<p>
+Sound in air is generally a longitudinal mechanical wave.
+It requires a material medium for propagation.
+</p>
+
+<h2>7. Superposition</h2>
+
+<p>
+When waves overlap, the resultant displacement is the
+algebraic sum of individual displacements.
+</p>
+
+<h2>8. Standing Waves</h2>
+
+<p>
+Standing waves are formed by superposition of two waves
+of the same frequency and amplitude travelling in opposite
+directions.
+</p>
+
+<h2>9. Beats</h2>
+
+<div class="formula">
+
+Beat frequency = |f₁ − f₂|
+
+</div>
+
+<div class="important">
+
+⭐ Mechanical waves require a material medium.
+
+</div>
+
+<h2>Important Questions</h2>
+
+<div class="question">
+1. Differentiate transverse and longitudinal waves.
+</div>
+
+<div class="question">
+2. Derive v = fλ.
+</div>
+
+<div class="question">
+3. Explain standing waves.
+</div>
+
+<div class="question">
+4. What are beats?
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- FORMULA SHEET -->
+<!-- ================================================= -->
+
+<div class="chapter">
+
+<div class="chapter-title" onclick="toggle(this)">
+📌 Class 11 Physics Quick Formula Sheet
+</div>
+
+<div class="notes">
+
+<h2>Motion</h2>
+
+<div class="formula">
+
+v = u + at
+
+<br>
+
+s = ut + ½at²
+
+<br>
+
+v² = u² + 2as
+
+</div>
+
+<h2>Force</h2>
+
+<div class="formula">
+
+F = ma
+
+<br>
+
+p = mv
+
+<br>
+
+J = FΔt
+
+</div>
+
+<h2>Work & Energy</h2>
+
+<div class="formula">
+
+W = Fs cosθ
+
+<br>
+
+K = ½mv²
+
+<br>
+
+U = mgh
+
+<br>
+
+P = W/t
+
+</div>
+
+<h2>Circular Motion</h2>
+
+<div class="formula">
+
+a = v²/r
+
+<br>
+
+F = mv²/r
+
+</div>
+
+<h2>Gravitation</h2>
+
+<div class="formula">
+
+F = Gm₁m₂/r²
+
+<br>
+
+g = GM/R²
+
+<br>
+
+ve = √(2GM/R)
+
+<br>
+
+vo = √(GM/r)
+
+</div>
+
+<h2>Fluids</h2>
+
+<div class="formula">
+
+P = F/A
+
+<br>
+
+A₁v₁ = A₂v₂
+
+<br>
+
+P + ½ρv² + ρgh = constant
+
+</div>
+
+<h2>Thermal Physics</h2>
+
+<div class="formula">
+
+Q = mcΔT
+
+<br>
+
+Q = mL
+
+<br>
+
+PV = nRT
+
+</div>
+
+<h2>SHM</h2>
+
+<div class="formula">
+
+a = −ω²x
+
+<br>
+
+T = 2π/ω
+
+<br>
+
+T = 2π√(L/g)
+
+</div>
+
+<h2>Waves</h2>
+
+<div class="formula">
+
+v = fλ
+
+<br>
+
+f = 1/T
+
+<br>
+
+Beat frequency = |f₁ − f₂|
+
+</div>
+
+</div>
+</div>
+
+
+</div>
+
+
+<footer>
+
+<h3>⚡ Student Hub</h3>
+
+<p>
+Class 11 Physics • Learn • Revise • Practice
+</p>
+
+<p>
+© 2026 Student Hub
+</p>
+
+</footer>
+
+
+<script>
+
+function toggle(element){
+
+    let notes =
+    element.nextElementSibling;
+
+    if(notes.style.display === "block"){
+
+        notes.style.display = "none";
+
+    }else{
+
+        notes.style.display = "block";
+
+    }
+
+}
+
+
+function searchNotes(){
+
+    let input =
+    document
+    .getElementById("search")
+    .value
+    .toLowerCase();
+
+    let chapters =
+    document
+    .querySelectorAll(".chapter");
+
+    chapters.forEach(function(chapter){
+
+        let text =
+        chapter.innerText.toLowerCase();
+
+        if(text.includes(input)){
+
+            chapter.style.display = "block";
+
+        }else{
+
+            chapter.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>

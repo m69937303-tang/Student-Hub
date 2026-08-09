@@ -1,296 +1,3140 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Biology - Student Hub</title><meta name="description"
-content="Class 12 Biology notes, important topics, diagrams and MCQs for students.">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Student Hub | Class 12 Biology Detailed Notes
+</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#f3f8f4;
+
+    color:#17231b;
+
+    line-height:1.75;
+}
+
+
+/* HEADER */
+
+header{
+
+    background:
+    linear-gradient(135deg,#0f5132,#198754,#20c997);
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 15px;
+
+}
+
+header h1{
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+}
+
+header p{
+
+    font-size:16px;
+
+}
+
+
+/* MAIN */
+
+.container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+
+/* SEARCH */
+
+.search{
+
+    width:100%;
+
+    padding:16px;
+
+    border:2px solid #d8e5dc;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    margin-bottom:20px;
+
+    outline:none;
+
+}
+
+.search:focus{
+
+    border-color:#198754;
+
+}
+
+
+/* CHAPTER */
+
+.chapter{
+
+    background:white;
+
+    border-radius:16px;
+
+    margin-bottom:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,.08);
+
+}
+
+
+/* CHAPTER TITLE */
+
+.chapter-title{
+
+    padding:21px;
+
+    font-size:21px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:white;
+
+}
+
+.chapter-title:hover{
+
+    background:#edf8f1;
+
+}
+
+
+/* NOTES */
+
+.notes{
+
+    display:none;
+
+    padding:24px;
+
+    border-top:1px solid #e5eee8;
+
+}
+
+
+/* HEADINGS */
+
+.notes h2{
+
+    color:#087443;
+
+    margin-top:25px;
+
+    margin-bottom:8px;
+
+}
+
+.notes h3{
+
+    color:#34443a;
+
+    margin-top:18px;
+
+    margin-bottom:6px;
+
+}
+
+
+/* LIST */
+
+.notes ul,
+.notes ol{
+
+    margin-left:25px;
+
+}
+
+
+/* CONCEPT BOX */
+
+.concept{
+
+    background:#eefaf3;
+
+    border-left:5px solid #198754;
+
+    padding:15px;
+
+    margin:14px 0;
+
+    border-radius:8px;
+
+}
+
+
+/* IMPORTANT */
+
+.important{
+
+    background:#fff7df;
+
+    border-left:5px solid #e0a800;
+
+    padding:15px;
+
+    margin:14px 0;
+
+    border-radius:8px;
+
+}
+
+
+/* NCERT */
+
+.ncert{
+
+    background:#eef4ff;
+
+    border-left:5px solid #356ae6;
+
+    padding:15px;
+
+    margin:14px 0;
+
+    border-radius:8px;
+
+}
+
+
+/* QUESTION */
+
+.question{
+
+    background:#f7efff;
+
+    border-left:5px solid #8744bd;
+
+    padding:14px;
+
+    margin:10px 0;
+
+    border-radius:8px;
+
+}
+
+
+/* TABLE */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin:15px 0;
+
+}
+
+th,td{
+
+    border:1px solid #d9e2dc;
+
+    padding:10px;
+
+    text-align:left;
+
+}
+
+th{
+
+    background:#eaf6ee;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+    background:#17231b;
+
+    color:white;
+
+    text-align:center;
+
+    padding:28px;
+
+    margin-top:30px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    header h1{
+
+        font-size:25px;
+
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #172033;
-      line-height: 1.6;
+    .container{
+
+        padding:12px;
+
     }
 
-    header {
-      background: linear-gradient(135deg, #16a34a, #059669);
-      color: white;
-      padding: 35px 20px;
-      text-align: center;
+    .notes{
+
+        padding:16px;
+
     }
 
-    header h1 {
-      font-size: 35px;
-      margin-bottom: 8px;
+    .chapter-title{
+
+        font-size:18px;
+
     }
 
-    header p {
-      font-size: 17px;
+    table{
+
+        font-size:13px;
+
     }
 
-    .container {
-      width: 92%;
-      max-width: 1100px;
-      margin: 25px auto;
-    }
+}
 
-    .back {
-      display: inline-block;
-      text-decoration: none;
-      background: white;
-      color: #16a34a;
-      padding: 10px 16px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
+</style>
 
-    .section-title {
-      text-align: center;
-      margin: 25px 0 18px;
-      font-size: 27px;
-    }
+</head>
 
-    .chapters {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-    }
 
-    .card {
-      background: white;
-      padding: 22px;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: 0.2s;
-    }
+<body>
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
 
-    .card h3 {
-      color: #16a34a;
-      margin-bottom: 10px;
-    }
+<header>
 
-    .card p {
-      color: #555;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
+<h1>🧬 Student Hub</h1>
 
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      background: #16a34a;
-      color: white;
-      padding: 9px 15px;
-      border-radius: 7px;
-      font-size: 14px;
-      font-weight: bold;
-    }
+<p>
+Class 12 Biology — Detailed Notes
+</p>
 
-    .important,
-    .mcq {
-      background: white;
-      margin-top: 30px;
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
+<p>
+NCERT Concepts • Important Points • Questions • Revision
+</p>
 
-    .important h2,
-    .mcq h2 {
-      color: #16a34a;
-      margin-bottom: 15px;
-    }
+</header>
 
-    .topic {
-      background: #f0fdf4;
-      padding: 12px;
-      margin: 8px 0;
-      border-radius: 8px;
-      font-weight: bold;
-    }
 
-    .question {
-      margin-bottom: 18px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #ddd;
-    }
+<div class="container">
 
-    footer {
-      margin-top: 40px;
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 28px;
-      }
+<input
+type="text"
+id="search"
+class="search"
+placeholder="🔍 Search Biology chapter or topic..."
+onkeyup="searchNotes()"
+>
 
-      .section-title {
-        font-size: 23px;
-      }
-    }
-  </style></head><body>  <header>
-    <h1>🧬 Biology</h1>
-    <p>Class 12 Biology Notes, Important Topics & MCQs</p>
-  </header>  <div class="container"><a class="back" href="index.html">← Back to Student Hub</a>
 
-<h2 class="section-title">📚 Biology Chapters</h2>
+<!-- ================================================= -->
+<!-- CHAPTER 1 -->
+<!-- ================================================= -->
 
-<div class="chapters">
 
-  <div class="card">
-    <h3>Chapter 1: Sexual Reproduction in Flowering Plants</h3>
-    <p>Flower structure, pollination, fertilisation, double fertilisation and seeds.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<div class="chapter">
 
-  <div class="card">
-    <h3>Chapter 2: Human Reproduction</h3>
-    <p>Male and female reproductive systems, gametogenesis, menstrual cycle and fertilisation.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+<div class="chapter-title"
+onclick="toggle(this)">
 
-  <div class="card">
-    <h3>Chapter 3: Reproductive Health</h3>
-    <p>Reproductive health, contraception, infertility and reproductive health awareness.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 4: Principles of Inheritance and Variation</h3>
-    <p>Mendel's laws, inheritance patterns, chromosomes and genetic disorders.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 5: Molecular Basis of Inheritance</h3>
-    <p>DNA, RNA, replication, transcription, translation and genetic code.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 6: Evolution</h3>
-    <p>Origin of life, evolution, natural selection and evidence of evolution.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 7: Human Health and Disease</h3>
-    <p>Common diseases, immunity, vaccines and human health.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 8: Microbes in Human Welfare</h3>
-    <p>Useful microbes, industrial products, antibiotics and sewage treatment.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 9: Biotechnology - Principles and Processes</h3>
-    <p>Genetic engineering, restriction enzymes, vectors and PCR.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 10: Biotechnology and its Applications</h3>
-    <p>GM crops, insulin, gene therapy and biotechnology applications.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 11: Organisms and Populations</h3>
-    <p>Population interactions, growth and adaptations.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 12: Ecosystem</h3>
-    <p>Energy flow, food chains, ecological pyramids and nutrient cycles.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 13: Biodiversity and Conservation</h3>
-    <p>Biodiversity, threats, conservation methods and hotspots.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h3>Chapter 14: Environmental Issues</h3>
-    <p>Pollution, global warming, ozone depletion and waste management.</p>
-    <a class="btn" href="#">Open Notes</a>
-  </div>
+1️⃣ Sexual Reproduction in Flowering Plants
 
 </div>
+
+
+<div class="notes">
+
+
+<h2>1. Introduction</h2>
+
+<p>
+
+Sexual reproduction in flowering plants involves the formation
+of male and female gametes, transfer of pollen, fertilisation
+and formation of seeds and fruits.
+
+</p>
+
+
+<h2>2. Flower</h2>
+
+<p>
+
+A flower is the reproductive structure of angiosperms.
+
+</p>
+
+
+<h3>Four Main Whorls</h3>
+
+<ul>
+
+<li>Calyx — sepals</li>
+
+<li>Corolla — petals</li>
+
+<li>Androecium — stamens</li>
+
+<li>Gynoecium — carpels</li>
+
+</ul>
+
+
+<h2>3. Stamen</h2>
+
+<p>
+
+The stamen is the male reproductive organ.
+
+Each stamen consists of:
+
+</p>
+
+<ul>
+
+<li>Filament</li>
+
+<li>Anther</li>
+
+</ul>
+
+
+<h2>4. Pollen Grain</h2>
+
+<p>
+
+Pollen grains represent the male gametophyte at the stage
+of shedding.
+
+</p>
+
+
+<div class="concept">
+
+Pollen grain generally has two layers:
+
+<br><br>
+
+<b>Exine:</b> outer hard layer containing sporopollenin.
+
+<br>
+
+<b>Intine:</b> inner layer.
+
+</div>
+
+
+<h2>5. Microsporogenesis</h2>
+
+<p>
+
+The formation of microspores from pollen mother cells through
+meiosis is called microsporogenesis.
+
+</p>
+
+
+<div class="concept">
+
+Pollen Mother Cell
+
+↓
+
+Meiosis
+
+↓
+
+Four haploid microspores
+
+↓
+
+Pollen grains
+
+</div>
+
+
+<h2>6. Gynoecium</h2>
+
+<p>
+
+The female reproductive part of a flower is called gynoecium.
+
+It consists of:
+
+</p>
+
+<ul>
+
+<li>Stigma</li>
+
+<li>Style</li>
+
+<li>Ovary</li>
+
+</ul>
+
+
+<h2>7. Ovule</h2>
+
+<p>
+
+Ovules are present inside the ovary.
+
+An ovule contains the female gametophyte.
+
+</p>
+
+
+<h2>8. Megasporogenesis</h2>
+
+<p>
+
+Formation of megaspores from the megaspore mother cell
+through meiosis is called megasporogenesis.
+
+</p>
+
+
+<div class="concept">
+
+Megaspore Mother Cell
+
+↓
+
+Meiosis
+
+↓
+
+Four megaspores
+
+↓
+
+Usually one functional megaspore
+
+↓
+
+Embryo sac
+
+</div>
+
+
+<h2>9. Embryo Sac</h2>
+
+<p>
+
+The typical mature embryo sac is 7-celled and 8-nucleate.
+
+</p>
+
+
+<table>
+
+<tr>
+
+<th>Structure</th>
+
+<th>Number</th>
+
+</tr>
+
+<tr>
+
+<td>Egg</td>
+
+<td>1</td>
+
+</tr>
+
+<tr>
+
+<td>Synergids</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td>Polar nuclei</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td>Antipodals</td>
+
+<td>3</td>
+
+</tr>
+
+</table>
+
 
 <div class="important">
 
-  <h2>🔥 Important Biology Topics</h2>
-
-  <div class="topic">🌱 Double Fertilisation</div>
-  <div class="topic">🧬 Mendel's Laws of Inheritance</div>
-  <div class="topic">🧬 DNA Replication</div>
-  <div class="topic">🧪 Transcription & Translation</div>
-  <div class="topic">🧫 PCR & Biotechnology</div>
-  <div class="topic">❤️ Human Reproduction</div>
-  <div class="topic">🌍 Ecosystem & Energy Flow</div>
-  <div class="topic">🌳 Biodiversity & Conservation</div>
+⭐ Synergids contain special structures called
+filiform apparatus which help guide the pollen tube.
 
 </div>
 
-<div class="mcq">
 
-  <h2>📝 Quick MCQs</h2>
+<h2>10. Pollination</h2>
 
-  <div class="question">
-    <b>1. The functional unit of heredity is:</b><br>
-    A) Cell<br>
-    B) Tissue<br>
-    C) Gene<br>
-    D) Organ
-    <br><br>
-    <b>Answer: C) Gene</b>
-  </div>
+<p>
 
-  <div class="question">
-    <b>2. DNA stands for:</b><br>
-    A) Deoxyribonucleic Acid<br>
-    B) Dinitrogen Acid<br>
-    C) Deoxyribose Nitrogen Acid<br>
-    D) Double Nucleic Acid
-    <br><br>
-    <b>Answer: A) Deoxyribonucleic Acid</b>
-  </div>
+Transfer of pollen grains from anther to stigma is called pollination.
 
-  <div class="question">
-    <b>3. Which molecule carries genetic information?</b><br>
-    A) DNA<br>
-    B) Glucose<br>
-    C) Lipid<br>
-    D) Water
-    <br><br>
-    <b>Answer: A) DNA</b>
-  </div>
+</p>
+
+
+<h3>Types</h3>
+
+<ul>
+
+<li>Autogamy</li>
+
+<li>Geitonogamy</li>
+
+<li>Xenogamy</li>
+
+</ul>
+
+
+<h2>11. Agents of Pollination</h2>
+
+<ul>
+
+<li>Wind</li>
+
+<li>Water</li>
+
+<li>Insects</li>
+
+<li>Birds</li>
+
+<li>Other animals</li>
+
+</ul>
+
+
+<h2>12. Pollen-Pistil Interaction</h2>
+
+<p>
+
+The pollen grain germinates on a compatible stigma and produces
+a pollen tube.
+
+The pollen tube grows through the style towards the ovule.
+
+</p>
+
+
+<h2>13. Fertilisation</h2>
+
+<p>
+
+Fusion of male and female gametes is called fertilisation.
+
+</p>
+
+
+<h2>14. Double Fertilisation</h2>
+
+<p>
+
+Double fertilisation is a characteristic feature of angiosperms.
+
+</p>
+
+
+<div class="concept">
+
+<b>Syngamy:</b>
+
+Male gamete + egg
+
+↓
+
+Zygote
+
+<br><br>
+
+<b>Triple fusion:</b>
+
+Male gamete + two polar nuclei
+
+↓
+
+Primary endosperm nucleus
 
 </div>
 
-  </div>  <footer>
-    <p>© 2026 Student Hub | Learn • Practice • Improve</p>
-  </footer></body>
+
+<div class="important">
+
+⭐ Double fertilisation = Syngamy + Triple fusion.
+
+</div>
+
+
+<h2>15. Post-Fertilisation Changes</h2>
+
+<ul>
+
+<li>Zygote → Embryo</li>
+
+<li>Ovule → Seed</li>
+
+<li>Ovary → Fruit</li>
+
+<li>Ovary wall → Pericarp</li>
+
+</ul>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. Explain microsporogenesis.
+
+</div>
+
+<div class="question">
+
+2. Explain development of a typical embryo sac.
+
+</div>
+
+<div class="question">
+
+3. What is double fertilisation?
+
+</div>
+
+<div class="question">
+
+4. Differentiate autogamy, geitonogamy and xenogamy.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 2 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+2️⃣ Human Reproduction
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Male Reproductive System</h2>
+
+<p>
+
+The male reproductive system consists of testes,
+accessory ducts, accessory glands and external genitalia.
+
+</p>
+
+
+<h2>2. Testes</h2>
+
+<p>
+
+Testes are located in the scrotum.
+
+They produce sperm and male sex hormones.
+
+</p>
+
+
+<h3>Seminiferous Tubules</h3>
+
+<p>
+
+Seminiferous tubules are the sites of sperm production.
+
+</p>
+
+
+<h3>Sertoli Cells</h3>
+
+<p>
+
+Sertoli cells provide nourishment and support to developing
+germ cells.
+
+</p>
+
+
+<h3>Leydig Cells</h3>
+
+<p>
+
+Leydig cells produce androgens, mainly testosterone.
+
+</p>
+
+
+<h2>3. Spermatogenesis</h2>
+
+<div class="concept">
+
+Spermatogonia
+
+↓
+
+Primary spermatocyte
+
+↓
+
+Secondary spermatocytes
+
+↓
+
+Spermatids
+
+↓
+
+Spermatozoa
+
+</div>
+
+
+<h2>4. Spermiogenesis</h2>
+
+<p>
+
+Transformation of spermatids into spermatozoa is called
+spermiogenesis.
+
+</p>
+
+
+<h2>5. Spermiation</h2>
+
+<p>
+
+Release of spermatozoa from Sertoli cells into the lumen
+of seminiferous tubules is called spermiation.
+
+</p>
+
+
+<h2>6. Female Reproductive System</h2>
+
+<ul>
+
+<li>Ovaries</li>
+
+<li>Oviducts</li>
+
+<li>Uterus</li>
+
+<li>Cervix</li>
+
+<li>Vagina</li>
+
+</ul>
+
+
+<h2>7. Oogenesis</h2>
+
+<p>
+
+Oogenesis is the process of formation and development
+of female gametes.
+
+</p>
+
+
+<div class="concept">
+
+Oogonia
+
+↓
+
+Primary oocyte
+
+↓
+
+Secondary oocyte
+
+↓
+
+Ovum
+
+</div>
+
+
+<h2>8. Menstrual Cycle</h2>
+
+<p>
+
+The menstrual cycle is a cyclic reproductive process in
+human females.
+
+</p>
+
+
+<h3>Main Phases</h3>
+
+<ol>
+
+<li>Menstrual phase</li>
+
+<li>Follicular phase</li>
+
+<li>Ovulation</li>
+
+<li>Luteal phase</li>
+
+</ol>
+
+
+<h2>9. Ovulation</h2>
+
+<p>
+
+Ovulation is the release of the secondary oocyte from the ovary.
+
+A surge in LH triggers ovulation.
+
+</p>
+
+
+<div class="important">
+
+⭐ LH surge → Ovulation.
+
+</div>
+
+
+<h2>10. Fertilisation</h2>
+
+<p>
+
+Fertilisation normally occurs in the ampullary-isthmic junction
+of the fallopian tube.
+
+</p>
+
+
+<h2>11. Implantation</h2>
+
+<p>
+
+The blastocyst becomes attached to the uterine wall.
+This process is called implantation.
+
+</p>
+
+
+<h2>12. Pregnancy</h2>
+
+<p>
+
+After implantation, the embryo develops inside the uterus.
+
+The placenta provides exchange between maternal and foetal
+systems and also has endocrine functions.
+
+</p>
+
+
+<h2>13. Parturition</h2>
+
+<p>
+
+Parturition means childbirth.
+
+Hormonal and mechanical signals contribute to the process.
+
+</p>
+
+
+<h2>14. Lactation</h2>
+
+<p>
+
+After childbirth, mammary glands produce milk.
+
+Prolactin is important for milk production and oxytocin
+helps in milk ejection.
+
+</p>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. Explain spermatogenesis.
+
+</div>
+
+<div class="question">
+
+2. Explain oogenesis.
+
+</div>
+
+<div class="question">
+
+3. Explain the menstrual cycle.
+
+</div>
+
+<div class="question">
+
+4. What is the role of LH in ovulation?
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 3 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+3️⃣ Reproductive Health
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Reproductive Health</h2>
+
+<p>
+
+Reproductive health means total well-being in all aspects
+of reproduction.
+
+</p>
+
+
+<h2>2. Population Control</h2>
+
+<p>
+
+Family planning and awareness can help maintain reproductive
+health and responsible population management.
+
+</p>
+
+
+<h2>3. Contraception</h2>
+
+<p>
+
+Contraceptive methods are used to prevent unwanted pregnancy.
+
+</p>
+
+
+<h3>Natural Methods</h3>
+
+<ul>
+
+<li>Periodic abstinence</li>
+
+<li>Withdrawal</li>
+
+<li>Lactational amenorrhea</li>
+
+</ul>
+
+
+<h3>Barrier Methods</h3>
+
+<ul>
+
+<li>Condoms</li>
+
+<li>Diaphragms</li>
+
+<li>Cervical caps</li>
+
+</ul>
+
+
+<h3>Intrauterine Devices</h3>
+
+<ul>
+
+<li>Copper-releasing IUDs</li>
+
+<li>Hormone-releasing IUDs</li>
+
+</ul>
+
+
+<h3>Hormonal Methods</h3>
+
+<p>
+
+Hormonal contraceptives can prevent ovulation and alter
+conditions necessary for fertilisation.
+
+</p>
+
+
+<h2>4. Surgical Methods</h2>
+
+<p>
+
+Vasectomy and tubectomy are permanent contraceptive procedures.
+
+</p>
+
+
+<h2>5. Sexually Transmitted Infections</h2>
+
+<p>
+
+Some infections can spread through sexual contact.
+
+Examples include:
+
+</p>
+
+<ul>
+
+<li>Gonorrhoea</li>
+
+<li>Syphilis</li>
+
+<li>Genital herpes</li>
+
+<li>Chlamydia</li>
+
+<li>HIV infection</li>
+
+</ul>
+
+
+<div class="important">
+
+⭐ Awareness, prevention, testing and appropriate medical care
+are important for reproductive health.
+
+</div>
+
+
+<h2>6. Infertility</h2>
+
+<p>
+
+Inability to conceive despite appropriate attempts may be
+associated with several biological or medical factors.
+
+</p>
+
+
+<h2>7. Assisted Reproductive Technologies</h2>
+
+<ul>
+
+<li>IVF</li>
+
+<li>ZIFT</li>
+
+<li>GIFT</li>
+
+</ul>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. What is reproductive health?
+
+</div>
+
+<div class="question">
+
+2. Explain different contraceptive methods.
+
+</div>
+
+<div class="question">
+
+3. What are STIs?
+
+</div>
+
+<div class="question">
+
+4. What is IVF?
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 4 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+4️⃣ Principles of Inheritance and Variation
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Genetics</h2>
+
+<p>
+
+Genetics is the study of heredity and variation.
+
+</p>
+
+
+<h2>2. Heredity</h2>
+
+<p>
+
+Heredity is the transmission of characters from parents
+to offspring.
+
+</p>
+
+
+<h2>3. Mendel</h2>
+
+<p>
+
+Gregor Mendel performed experiments on pea plants and
+established important principles of inheritance.
+
+</p>
+
+
+<h2>4. Monohybrid Cross</h2>
+
+<p>
+
+A cross involving one pair of contrasting characters
+is called a monohybrid cross.
+
+</p>
+
+
+<div class="concept">
+
+Example:
+
+TT × tt
+
+↓
+
+F₁ = all Tt
+
+</div>
+
+
+<h2>5. Law of Dominance</h2>
+
+<p>
+
+In a heterozygote, one allele may express itself while
+the other is masked.
+
+</p>
+
+
+<h2>6. Law of Segregation</h2>
+
+<p>
+
+The two alleles of a gene separate during gamete formation,
+so each gamete receives only one allele.
+
+</p>
+
+
+<div class="important">
+
+⭐ Alleles do not blend permanently. They segregate during
+gamete formation.
+
+</div>
+
+
+<h2>7. Dihybrid Cross</h2>
+
+<p>
+
+A cross involving two pairs of contrasting characters
+is called a dihybrid cross.
+
+</p>
+
+
+<div class="formula">
+
+Classical F₂ phenotypic ratio:
+
+9 : 3 : 3 : 1
+
+</div>
+
+
+<h2>8. Test Cross</h2>
+
+<p>
+
+A test cross is performed between an individual with an
+unknown genotype and a homozygous recessive individual.
+
+</p>
+
+
+<h2>9. Incomplete Dominance</h2>
+
+<p>
+
+Neither allele completely dominates the other, resulting
+in an intermediate phenotype in the heterozygote.
+
+</p>
+
+
+<h2>10. Codominance</h2>
+
+<p>
+
+Both alleles express themselves in the heterozygote.
+
+Example:
+
+AB blood group.
+
+</p>
+
+
+<h2>11. Multiple Alleles</h2>
+
+<p>
+
+A gene may have more than two allelic forms in a population.
+
+The ABO blood group system is a classic example.
+
+</p>
+
+
+<h2>12. Sex Determination</h2>
+
+<p>
+
+In humans, females generally have XX chromosomes and males
+generally have XY chromosomes.
+
+</p>
+
+
+<h2>13. Sex-Linked Inheritance</h2>
+
+<p>
+
+Genes located on sex chromosomes may show sex-linked inheritance.
+
+Examples include haemophilia and colour blindness.
+
+</p>
+
+
+<h2>14. Mutation</h2>
+
+<p>
+
+A mutation is a sudden heritable change in genetic material.
+
+</p>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. Explain Mendel's law of segregation.
+
+</div>
+
+<div class="question">
+
+2. Explain monohybrid cross.
+
+</div>
+
+<div class="question">
+
+3. Explain dihybrid cross and its ratio.
+
+</div>
+
+<div class="question">
+
+4. Differentiate incomplete dominance and codominance.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 5 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+5️⃣ Molecular Basis of Inheritance
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. DNA</h2>
+
+<p>
+
+DNA stands for deoxyribonucleic acid.
+
+It stores hereditary information in most organisms.
+
+</p>
+
+
+<h2>2. Structure of DNA</h2>
+
+<p>
+
+DNA consists of two polynucleotide chains arranged in a
+double helix.
+
+</p>
+
+
+<h3>Nitrogen Bases</h3>
+
+<ul>
+
+<li>Adenine — A</li>
+
+<li>Thymine — T</li>
+
+<li>Guanine — G</li>
+
+<li>Cytosine — C</li>
+
+</ul>
+
+
+<div class="important">
+
+A pairs with T.
+
+<br>
+
+G pairs with C.
+
+</div>
+
+
+<h2>3. Hydrogen Bonds</h2>
+
+<div class="formula">
+
+A–T → 2 hydrogen bonds
+
+<br>
+
+G–C → 3 hydrogen bonds
+
+</div>
+
+
+<h2>4. DNA Replication</h2>
+
+<p>
+
+DNA replication is the process by which DNA makes an
+identical copy of itself.
+
+</p>
+
+
+<div class="concept">
+
+DNA
+
+↓
+
+Unwinding
+
+↓
+
+Template strands
+
+↓
+
+Complementary nucleotides
+
+↓
+
+Two DNA molecules
+
+</div>
+
+
+<h2>5. Semi-Conservative Replication</h2>
+
+<p>
+
+Each daughter DNA molecule contains one parental strand
+and one newly synthesised strand.
+
+</p>
+
+
+<h2>6. Transcription</h2>
+
+<p>
+
+Transcription is the formation of RNA using DNA as a template.
+
+</p>
+
+
+<div class="concept">
+
+DNA
+
+↓
+
+RNA
+
+</div>
+
+
+<h2>7. Translation</h2>
+
+<p>
+
+Translation is the synthesis of protein using the information
+present in mRNA.
+
+</p>
+
+
+<div class="concept">
+
+mRNA
+
+↓
+
+Ribosome
+
+↓
+
+Amino acid sequence
+
+↓
+
+Protein
+
+</div>
+
+
+<h2>8. Genetic Code</h2>
+
+<p>
+
+The genetic code is the sequence of nucleotides in mRNA
+that determines the amino acid sequence of a protein.
+
+</p>
+
+
+<div class="important">
+
+⭐ AUG is the common start codon.
+
+<br>
+
+⭐ UAA, UAG and UGA are stop codons.
+
+</div>
+
+
+<h2>9. Lac Operon</h2>
+
+<p>
+
+The lac operon is an example of gene regulation in bacteria.
+
+It controls genes involved in lactose utilisation.
+
+</p>
+
+
+<h2>10. Human Genome Project</h2>
+
+<p>
+
+The Human Genome Project aimed to determine the sequence
+of bases in the human genome and identify genes.
+
+</p>
+
+
+<h2>11. DNA Fingerprinting</h2>
+
+<p>
+
+DNA fingerprinting identifies individuals based on
+differences in specific DNA regions.
+
+</p>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. Explain semi-conservative DNA replication.
+
+</div>
+
+<div class="question">
+
+2. Explain transcription.
+
+</div>
+
+<div class="question">
+
+3. Explain translation.
+
+</div>
+
+<div class="question">
+
+4. What is genetic code?
+
+</div>
+
+<div class="question">
+
+5. Explain lac operon.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 6 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+6️⃣ Evolution
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Evolution</h2>
+
+<p>
+
+Evolution refers to the gradual change in populations
+over generations.
+
+</p>
+
+
+<h2>2. Origin of Life</h2>
+
+<p>
+
+Scientific explanations for the origin of life involve
+chemical evolution and gradual development of complex
+molecules and living systems.
+
+</p>
+
+
+<h2>3. Evidence of Evolution</h2>
+
+<ul>
+
+<li>Fossils</li>
+
+<li>Comparative anatomy</li>
+
+<li>Embryology</li>
+
+<li>Molecular evidence</li>
+
+</ul>
+
+
+<h2>4. Darwin's Theory</h2>
+
+<p>
+
+Darwin proposed natural selection as an important mechanism
+of evolution.
+
+</p>
+
+
+<h2>5. Natural Selection</h2>
+
+<p>
+
+Individuals with advantageous heritable variations may
+survive and reproduce more successfully under particular
+environmental conditions.
+
+</p>
+
+
+<h2>6. Adaptive Radiation</h2>
+
+<p>
+
+Evolution of different species from a common ancestral stock
+in different habitats is called adaptive radiation.
+
+</p>
+
+
+<h2>7. Hardy-Weinberg Principle</h2>
+
+<p>
+
+In an ideal population, allele frequencies remain constant
+from generation to generation when evolutionary forces are absent.
+
+</p>
+
+
+<div class="formula">
+
+p + q = 1
+
+<br><br>
+
+p² + 2pq + q² = 1
+
+</div>
+
+
+<h2>8. Factors Affecting Genetic Equilibrium</h2>
+
+<ul>
+
+<li>Gene migration</li>
+
+<li>Genetic drift</li>
+
+<li>Mutation</li>
+
+<li>Genetic recombination</li>
+
+<li>Natural selection</li>
+
+</ul>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. Explain Darwin's theory of natural selection.
+
+</div>
+
+<div class="question">
+
+2. What is adaptive radiation?
+
+</div>
+
+<div class="question">
+
+3. Explain Hardy-Weinberg principle.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 7 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+7️⃣ Human Health and Disease
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Health</h2>
+
+<p>
+
+Health is a state of physical, mental and social well-being.
+
+</p>
+
+
+<h2>2. Disease</h2>
+
+<p>
+
+Disease is a condition that negatively affects normal
+functioning of the body.
+
+</p>
+
+
+<h2>3. Pathogens</h2>
+
+<p>
+
+Disease-causing organisms are called pathogens.
+
+</p>
+
+
+<ul>
+
+<li>Bacteria</li>
+
+<li>Viruses</li>
+
+<li>Protozoans</li>
+
+<li>Fungi</li>
+
+<li>Helminths</li>
+
+</ul>
+
+
+<h2>4. Immunity</h2>
+
+<p>
+
+Immunity is the ability of the body to resist or fight
+disease-causing agents.
+
+</p>
+
+
+<h3>Innate Immunity</h3>
+
+<p>
+
+Present from birth and provides non-specific defence.
+
+</p>
+
+
+<h3>Acquired Immunity</h3>
+
+<p>
+
+Develops during life and is specific to particular antigens.
+
+</p>
+
+
+<h2>5. Antibodies</h2>
+
+<p>
+
+Antibodies are proteins produced by B-lymphocytes in response
+to specific antigens.
+
+</p>
+
+
+<h2>6. Vaccination</h2>
+
+<p>
+
+Vaccination stimulates the immune system and helps develop
+immunological memory.
+
+</p>
+
+
+<h2>7. AIDS</h2>
+
+<p>
+
+AIDS is caused by HIV, which attacks important cells of
+the immune system.
+
+</p>
+
+
+<h2>8. Cancer</h2>
+
+<p>
+
+Cancer involves uncontrolled abnormal cell growth and division.
+
+</p>
+
+
+<h2>9. Allergies</h2>
+
+<p>
+
+Allergy is an exaggerated immune response to certain normally
+harmless substances.
+
+</p>
+
+
+<h2>10. Drugs and Alcohol</h2>
+
+<p>
+
+Substance misuse can affect physical and mental health and
+may cause dependence and other serious problems.
+
+</p>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. Differentiate innate and acquired immunity.
+
+</div>
+
+<div class="question">
+
+2. What is vaccination?
+
+</div>
+
+<div class="question">
+
+3. Explain how HIV affects the immune system.
+
+</div>
+
+<div class="question">
+
+4. What is cancer?
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 8 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+8️⃣ Microbes in Human Welfare
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Microorganisms</h2>
+
+<p>
+
+Microorganisms are microscopic organisms that are found
+in almost every environment.
+
+</p>
+
+
+<h2>2. Household Products</h2>
+
+<ul>
+
+<li>Lactobacillus → curd</li>
+
+<li>Yeast → bread and fermented beverages</li>
+
+</ul>
+
+
+<h2>3. Industrial Products</h2>
+
+<ul>
+
+<li>Alcohol</li>
+
+<li>Organic acids</li>
+
+<li>Enzymes</li>
+
+<li>Antibiotics</li>
+
+</ul>
+
+
+<h2>4. Antibiotics</h2>
+
+<p>
+
+Antibiotics are substances produced by microorganisms that
+can inhibit or kill other microorganisms.
+
+</p>
+
+
+<h2>5. Sewage Treatment</h2>
+
+<p>
+
+Microorganisms play an important role in biological treatment
+of sewage.
+
+</p>
+
+
+<h2>6. Biogas</h2>
+
+<p>
+
+Methanogenic microorganisms produce methane-rich biogas
+from organic waste under anaerobic conditions.
+
+</p>
+
+
+<h2>7. Biofertilisers</h2>
+
+<p>
+
+Microorganisms that improve nutrient availability to plants
+are called biofertilisers.
+
+</p>
+
+
+<h2>8. Biocontrol</h2>
+
+<p>
+
+Biological agents can be used to control pests and pathogens.
+
+</p>
+
+
+<div class="important">
+
+⭐ Microbes are useful in food production, industry,
+waste treatment, medicine and agriculture.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 9 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+9️⃣ Biotechnology: Principles and Processes
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Biotechnology</h2>
+
+<p>
+
+Biotechnology involves using living organisms, cells or
+biological systems to develop useful products and processes.
+
+</p>
+
+
+<h2>2. Recombinant DNA Technology</h2>
+
+<p>
+
+Recombinant DNA technology allows DNA fragments from different
+sources to be joined and introduced into a suitable host.
+
+</p>
+
+
+<h2>3. Important Tools</h2>
+
+<ul>
+
+<li>Restriction enzymes</li>
+
+<li>DNA ligase</li>
+
+<li>Vectors</li>
+
+<li>Host cells</li>
+
+<li>Polymerases</li>
+
+</ul>
+
+
+<h2>4. Restriction Enzymes</h2>
+
+<p>
+
+Restriction enzymes cut DNA at specific recognition sequences.
+
+</p>
+
+
+<h2>5. DNA Ligase</h2>
+
+<p>
+
+DNA ligase joins DNA fragments by forming phosphodiester bonds.
+
+</p>
+
+
+<h2>6. Vector</h2>
+
+<p>
+
+A vector carries foreign DNA into a host cell.
+
+Plasmids are commonly used vectors.
+
+</p>
+
+
+<h2>7. PCR</h2>
+
+<p>
+
+Polymerase Chain Reaction is used to amplify a specific DNA sequence.
+
+</p>
+
+
+<div class="concept">
+
+PCR involves repeated cycles of:
+
+<br><br>
+
+Denaturation
+
+↓
+
+Annealing
+
+↓
+
+Extension
+
+</div>
+
+
+<h2>8. Gel Electrophoresis</h2>
+
+<p>
+
+DNA fragments can be separated based on size by gel electrophoresis.
+
+Smaller fragments generally move faster through the gel.
+
+</p>
+
+
+<h2>9. Bioreactors</h2>
+
+<p>
+
+Bioreactors provide suitable conditions for large-scale production
+using biological systems.
+
+</p>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. What is recombinant DNA technology?
+
+</div>
+
+<div class="question">
+
+2. Explain the role of restriction enzymes.
+
+</div>
+
+<div class="question">
+
+3. Explain PCR.
+
+</div>
+
+<div class="question">
+
+4. What is a cloning vector?
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 10 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+🔟 Biotechnology and its Applications
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Applications of Biotechnology</h2>
+
+<ul>
+
+<li>Medicine</li>
+
+<li>Agriculture</li>
+
+<li>Industry</li>
+
+<li>Environmental management</li>
+
+</ul>
+
+
+<h2>2. Genetically Modified Organisms</h2>
+
+<p>
+
+GM organisms contain genetic material that has been deliberately
+altered using biotechnology.
+
+</p>
+
+
+<h2>3. Bt Crops</h2>
+
+<p>
+
+Bt crops contain genes derived from Bacillus thuringiensis
+that provide protection against certain insect pests.
+
+</p>
+
+
+<h2>4. Recombinant Insulin</h2>
+
+<p>
+
+Recombinant DNA technology can be used to produce human insulin
+using microorganisms.
+
+</p>
+
+
+<h2>5. Gene Therapy</h2>
+
+<p>
+
+Gene therapy aims to treat certain disorders by introducing,
+replacing or modifying genetic material in cells.
+
+</p>
+
+
+<h2>6. Molecular Diagnosis</h2>
+
+<p>
+
+Techniques such as PCR can help detect specific genetic sequences
+associated with pathogens or diseases.
+
+</p>
+
+
+<h2>7. Ethical Issues</h2>
+
+<p>
+
+Biotechnology raises questions involving biosafety, environmental
+impact, genetic privacy and responsible use.
+
+</p>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. What are genetically modified organisms?
+
+</div>
+
+<div class="question">
+
+2. Explain Bt crops.
+
+</div>
+
+<div class="question">
+
+3. What is gene therapy?
+
+</div>
+
+<div class="question">
+
+4. Explain applications of biotechnology in medicine.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 11 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+1️⃣1️⃣ Organisms and Populations
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Ecology</h2>
+
+<p>
+
+Ecology is the study of interactions among organisms and
+between organisms and their environment.
+
+</p>
+
+
+<h2>2. Population</h2>
+
+<p>
+
+A population is a group of individuals of the same species
+living in a particular geographical area.
+
+</p>
+
+
+<h2>3. Population Attributes</h2>
+
+<ul>
+
+<li>Population density</li>
+
+<li>Birth rate</li>
+
+<li>Death rate</li>
+
+<li>Sex ratio</li>
+
+<li>Age distribution</li>
+
+</ul>
+
+
+<h2>4. Population Growth</h2>
+
+<p>
+
+Population size changes due to births, deaths, immigration
+and emigration.
+
+</p>
+
+
+<h2>5. Exponential Growth</h2>
+
+<div class="formula">
+
+dN/dt = rN
+
+</div>
+
+
+<h2>6. Logistic Growth</h2>
+
+<p>
+
+When resources are limited, population growth may follow
+a logistic pattern.
+
+</p>
+
+
+<div class="formula">
+
+dN/dt = rN(K−N)/K
+
+</div>
+
+
+<h2>7. Interactions</h2>
+
+<table>
+
+<tr>
+
+<th>Interaction</th>
+
+<th>Effect</th>
+
+</tr>
+
+<tr>
+
+<td>Mutualism</td>
+
+<td>+/+</td>
+
+</tr>
+
+<tr>
+
+<td>Competition</td>
+
+<td>−/−</td>
+
+</tr>
+
+<tr>
+
+<td>Predation</td>
+
+<td>+/−</td>
+
+</tr>
+
+<tr>
+
+<td>Parasitism</td>
+
+<td>+/−</td>
+
+</tr>
+
+<tr>
+
+<td>Commensalism</td>
+
+<td>+/0</td>
+
+</tr>
+
+</table>
+
+
+<div class="important">
+
+⭐ Population ecology is important for understanding how
+organisms interact with limited environmental resources.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 12 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+1️⃣2️⃣ Ecosystem
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Ecosystem</h2>
+
+<p>
+
+An ecosystem consists of living organisms interacting with
+each other and with their physical environment.
+
+</p>
+
+
+<h2>2. Components</h2>
+
+<ul>
+
+<li>Biotic components</li>
+
+<li>Abiotic components</li>
+
+</ul>
+
+
+<h2>3. Producers</h2>
+
+<p>
+
+Green plants and other autotrophs produce organic matter
+using external energy sources.
+
+</p>
+
+
+<h2>4. Consumers</h2>
+
+<p>
+
+Consumers obtain energy by feeding on other organisms.
+
+</p>
+
+
+<h2>5. Decomposers</h2>
+
+<p>
+
+Bacteria and fungi break down dead organic matter and
+recycle nutrients.
+
+</p>
+
+
+<h2>6. Food Chain</h2>
+
+<div class="concept">
+
+Plants
+
+↓
+
+Herbivores
+
+↓
+
+Carnivores
+
+↓
+
+Higher carnivores
+
+</div>
+
+
+<h2>7. Food Web</h2>
+
+<p>
+
+A network of interconnected food chains is called a food web.
+
+</p>
+
+
+<h2>8. Energy Flow</h2>
+
+<p>
+
+Energy flows through an ecosystem in one direction.
+
+</p>
+
+
+<h2>9. Ecological Pyramids</h2>
+
+<ul>
+
+<li>Pyramid of number</li>
+
+<li>Pyramid of biomass</li>
+
+<li>Pyramid of energy</li>
+
+</ul>
+
+
+<div class="important">
+
+⭐ Pyramid of energy is always upright because energy is lost
+at each trophic transfer.
+
+</div>
+
+
+<h2>10. Decomposition</h2>
+
+<p>
+
+Decomposition is the breakdown of complex organic matter
+into simpler substances.
+
+</p>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. Explain energy flow in an ecosystem.
+
+</div>
+
+<div class="question">
+
+2. What are food chains and food webs?
+
+</div>
+
+<div class="question">
+
+3. Explain ecological pyramids.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 13 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+1️⃣3️⃣ Biodiversity and Conservation
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Biodiversity</h2>
+
+<p>
+
+Biodiversity refers to the variety of living organisms
+present on Earth.
+
+</p>
+
+
+<h2>2. Levels of Biodiversity</h2>
+
+<ul>
+
+<li>Genetic diversity</li>
+
+<li>Species diversity</li>
+
+<li>Ecosystem diversity</li>
+
+</ul>
+
+
+<h2>3. Importance of Biodiversity</h2>
+
+<ul>
+
+<li>Ecosystem stability</li>
+
+<li>Food resources</li>
+
+<li>Medicinal resources</li>
+
+<li>Economic value</li>
+
+<li>Scientific value</li>
+
+</ul>
+
+
+<h2>4. Biodiversity Loss</h2>
+
+<p>
+
+Major causes include habitat loss, overexploitation,
+invasive species and co-extinctions.
+
+</p>
+
+
+<h2>5. Conservation</h2>
+
+<h3>In-situ Conservation</h3>
+
+<p>
+
+Conservation of species in their natural habitats.
+
+</p>
+
+
+<h3>Ex-situ Conservation</h3>
+
+<p>
+
+Conservation outside natural habitats, such as zoos,
+botanical gardens and seed banks.
+
+</p>
+
+
+<div class="important">
+
+⭐ National parks, wildlife sanctuaries and biosphere reserves
+are examples associated with in-situ conservation.
+
+</div>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. Define biodiversity.
+
+</div>
+
+<div class="question">
+
+2. Explain the three levels of biodiversity.
+
+</div>
+
+<div class="question">
+
+3. Differentiate in-situ and ex-situ conservation.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CHAPTER 14 -->
+<!-- ================================================= -->
+
+
+<div class="chapter">
+
+<div class="chapter-title"
+onclick="toggle(this)">
+
+1️⃣4️⃣ Environmental Issues
+
+</div>
+
+
+<div class="notes">
+
+
+<h2>1. Pollution</h2>
+
+<p>
+
+Pollution is an undesirable change in the physical,
+chemical or biological characteristics of the environment.
+
+</p>
+
+
+<h2>2. Air Pollution</h2>
+
+<p>
+
+Air pollution results from harmful gases, particulate matter
+and other pollutants entering the atmosphere.
+
+</p>
+
+
+<h2>3. Water Pollution</h2>
+
+<p>
+
+Water pollution occurs when harmful substances contaminate
+water bodies.
+
+</p>
+
+
+<h2>4. Eutrophication</h2>
+
+<p>
+
+Excess nutrients entering water bodies can cause excessive
+growth of algae and other organisms. This is called
+eutrophication.
+
+</p>
+
+
+<h2>5. Biomagnification</h2>
+
+<p>
+
+The concentration of certain persistent pollutants can
+increase at successive trophic levels.
+
+</p>
+
+
+<h2>6. Greenhouse Effect</h2>
+
+<p>
+
+Certain gases absorb and re-emit infrared radiation,
+contributing to warming of the Earth's atmosphere.
+
+</p>
+
+
+<h2>7. Ozone Depletion</h2>
+
+<p>
+
+Reduction in stratospheric ozone increases the amount of
+harmful ultraviolet radiation reaching Earth's surface.
+
+</p>
+
+
+<h2>8. Solid Waste</h2>
+
+<p>
+
+Proper segregation, recycling, treatment and responsible
+disposal help reduce solid waste problems.
+
+</p>
+
+
+<h2>9. Sustainable Development</h2>
+
+<p>
+
+Sustainable development aims to meet present needs while
+protecting the ability of future generations to meet their needs.
+
+</p>
+
+
+<h2>🔥 Important Questions</h2>
+
+<div class="question">
+
+1. What is eutrophication?
+
+</div>
+
+<div class="question">
+
+2. Explain biomagnification.
+
+</div>
+
+<div class="question">
+
+3. Explain greenhouse effect.
+
+</div>
+
+<div class="question">
+
+4. What causes ozone depletion?
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Student Hub</p>
+
+<p>
+Class 12 Biology • Detailed Notes
+</p>
+
+</footer>
+
+
+
+<script>
+
+
+function toggle(element){
+
+    let notes =
+    element.nextElementSibling;
+
+    if(notes.style.display === "block"){
+
+        notes.style.display = "none";
+
+    }
+
+    else{
+
+        notes.style.display = "block";
+
+    }
+
+}
+
+
+
+function searchNotes(){
+
+    let input =
+    document
+    .getElementById("search")
+    .value
+    .toLowerCase();
+
+
+    let chapters =
+    document
+    .querySelectorAll(".chapter");
+
+
+    chapters.forEach(function(chapter){
+
+        let text =
+        chapter.innerText.toLowerCase();
+
+
+        if(text.includes(input)){
+
+            chapter.style.display = "block";
+
+        }
+
+        else{
+
+            chapter.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+</script>
+
+
+</body>
+
 </html>
